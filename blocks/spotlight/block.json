@@ -1,0 +1,32 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "property-spotlight/spotlight",
+    "version": "1.2.0",
+    "title": "Property Spotlight",
+    "category": "widgets",
+    "icon": "star-filled",
+    "description": "Display featured property listings from Linear.fi API",
+    "keywords": ["property", "spotlight", "featured", "listings", "properties", "real estate"],
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "limit": {
+            "type": "number",
+            "default": 0
+        },
+        "layout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        }
+    },
+    "textdomain": "property-spotlight",
+    "editorScript": "file:./index.js",
+    "style": "property-spotlight-frontend"
+}

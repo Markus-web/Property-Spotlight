@@ -1,0 +1,968 @@
+/**
+ * Property Spotlight Admin Styles
+ * Version: 1.0.0
+ */
+
+/* ============================================
+   CSS Custom Properties - Border Radius Scale
+   ============================================
+   
+   Strategic border-radius scale following modern design system principles.
+   Use these variables consistently throughout the admin interface.
+   
+   Scale:
+   - xs (2px):  Tiny decorative elements (color swatch inner)
+   - sm (4px):  Small interactive elements (inputs, buttons, small badges)
+   - md (6px):  Medium elements (images, nested cards, schedule boxes)
+   - lg (8px):  Large containers (section cards, main content cards)
+   - xl (12px): Pill-shaped badges, large interactive elements
+   - full (50%): Circular elements (spinners, avatars)
+*/
+
+:root {
+    --radius-xs: 2px;    /* Tiny decorative elements */
+    --radius-sm: 4px;    /* Small interactive elements (inputs, buttons) */
+    --radius-md: 6px;    /* Medium elements (images, nested cards) */
+    --radius-lg: 8px;    /* Large containers (section cards, main cards) */
+    --radius-xl: 12px;   /* Pill-shaped badges, large interactive elements */
+    --radius-full: 50%;  /* Circular elements (spinners, avatars) */
+}
+
+/* ============================================
+   Base Layout
+   ============================================ */
+
+.property-spotlight-admin {
+    max-width: 1200px;
+}
+
+.property-spotlight-header {
+    margin-bottom: 0;
+}
+
+.property-spotlight-header h1 {
+    margin-bottom: 8px;
+}
+
+.property-spotlight-header .description {
+    margin-top: 0;
+    color: #50575e;
+}
+
+/* ============================================
+   Tab Navigation
+   ============================================ */
+
+.property-spotlight-tabs {
+    margin-top: 20px;
+}
+
+.property-spotlight-tab-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #c3c4c7;
+    background: linear-gradient(to bottom, #f9f9f9, #f0f0f1);
+    margin: 0;
+    padding: 0;
+}
+
+.property-spotlight-tab-nav .tab-button {
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #50575e;
+    margin-bottom: -1px;
+    transition: all 0.2s ease;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.property-spotlight-tab-nav .tab-button:hover {
+    color: #1d2327;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.property-spotlight-tab-nav .tab-button.active {
+    background: #fff;
+    color: #1d2327;
+    border-color: #c3c4c7;
+    border-bottom-color: #fff;
+    box-shadow: 0 -2px 0 #2271b1 inset;
+}
+
+.property-spotlight-tab-nav .tab-button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+    margin-right: 6px;
+}
+
+/* Tab Content */
+.property-spotlight-tab-content {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-top: none;
+    padding: 24px;
+    min-height: 400px;
+}
+
+.property-spotlight-tab-panel {
+    display: none;
+}
+
+.property-spotlight-tab-panel.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ============================================
+   Section Cards (within tabs)
+   ============================================ */
+
+.property-spotlight-section {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.property-spotlight-section:last-child {
+    margin-bottom: 0;
+}
+
+.property-spotlight-section h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f1;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.property-spotlight-section h2 .dashicons {
+    color: #2271b1;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+}
+
+.property-spotlight-section h3 {
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.property-spotlight-section h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+/* ============================================
+   Form Tables
+   ============================================ */
+
+.property-spotlight-section .form-table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.property-spotlight-section .form-table th {
+    width: 180px;
+    padding: 16px 12px 16px 0;
+    font-weight: 500;
+    color: #1d2327;
+    vertical-align: top;
+}
+
+.property-spotlight-section .form-table td {
+    padding: 12px 0;
+}
+
+.property-spotlight-section .form-table input[type="text"],
+.property-spotlight-section .form-table input[type="url"],
+.property-spotlight-section .form-table input[type="number"] {
+    border-radius: var(--radius-sm);
+    border: 1px solid #8c8f94;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.property-spotlight-section .form-table input[type="text"]:focus,
+.property-spotlight-section .form-table input[type="url"]:focus,
+.property-spotlight-section .form-table input[type="number"]:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+.property-spotlight-section .form-table .description {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #646970;
+}
+
+/* Notices within sections */
+.property-spotlight-section .notice.inline {
+    margin: 0 0 20px 0;
+    border-radius: var(--radius-sm);
+}
+
+/* Submit buttons area */
+.property-spotlight-section .submit {
+    margin: 0;
+    padding-top: 16px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-style: italic;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.status-indicator.success {
+    color: #00a32a;
+    background: rgba(0, 163, 42, 0.08);
+}
+
+.status-indicator.error {
+    color: #d63638;
+    background: rgba(214, 54, 56, 0.08);
+}
+
+/* Legacy status spans */
+#credentials-status,
+#automation-status,
+#style-status,
+#save-status,
+#import-export-status {
+    font-style: italic;
+    font-size: 13px;
+    transition: opacity 0.3s;
+}
+
+#credentials-status.success,
+#automation-status.success,
+#style-status.success,
+#save-status.success,
+#import-export-status.success {
+    color: #00a32a;
+}
+
+#credentials-status.error,
+#automation-status.error,
+#style-status.error,
+#save-status.error,
+#import-export-status.error {
+    color: #d63638;
+}
+
+/* Credentials Section specific */
+.property-spotlight-credentials .submit {
+    border-top: 1px solid #f0f0f1;
+    margin-top: 16px;
+    padding-top: 20px;
+}
+
+#clear-credentials {
+    color: #d63638;
+    border-color: #d63638;
+}
+
+#clear-credentials:hover {
+    background: #d63638;
+    color: #fff;
+}
+
+/* Add methods */
+.property-spotlight-add-methods {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.method-dropdown {
+    flex: 1;
+    min-width: 300px;
+}
+
+.method-divider {
+    display: flex;
+    align-items: center;
+    padding: 0 12px 8px;
+    color: #666;
+    font-weight: 500;
+}
+
+.method-manual {
+    flex: 0 0 250px;
+}
+
+.manual-input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.manual-input-group input {
+    flex: 1;
+}
+
+/* Select2 customization */
+.property-spotlight-select + .select2-container {
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 38px;
+    border-color: #8c8f94;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 36px;
+    padding-left: 12px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 36px;
+}
+
+.select2-results__option--listing {
+    padding: 10px 12px;
+}
+
+.select2-results__option--listing .listing-address {
+    font-weight: 600;
+    display: block;
+}
+
+.select2-results__option--listing .listing-details {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* ============================================
+   Featured Listings List
+   ============================================ */
+
+.featured-listings-list {
+    min-height: 120px;
+    border: 2px dashed #dcdcde;
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    margin-bottom: 20px;
+    background: #fafafa;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.featured-listings-list:hover {
+    border-color: #c3c4c7;
+}
+
+.featured-listings-list.has-items {
+    border-style: solid;
+    border-color: #e0e0e0;
+    background: #fff;
+    padding: 12px;
+}
+
+.no-featured {
+    text-align: center;
+    color: #646970;
+    padding: 48px 24px;
+}
+
+.no-featured .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #dcdcde;
+    margin-bottom: 12px;
+}
+
+/* Featured Item Card */
+.featured-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-lg);
+    margin-bottom: 10px;
+    cursor: grab;
+    transition: all 0.2s ease;
+}
+
+.featured-item:hover {
+    background: #fff;
+    border-color: #c3c4c7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.featured-item:active {
+    cursor: grabbing;
+}
+
+.featured-item:last-child {
+    margin-bottom: 0;
+}
+
+.featured-item.ui-sortable-helper {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01);
+}
+
+.featured-item.ui-sortable-placeholder {
+    visibility: visible !important;
+    background: rgba(34, 113, 177, 0.08);
+    border: 2px dashed #2271b1;
+    border-radius: var(--radius-lg);
+}
+
+.featured-item .drag-handle {
+    color: #a7aaad;
+    cursor: grab;
+    font-size: 20px;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.featured-item:hover .drag-handle {
+    color: #646970;
+}
+
+.featured-item .listing-image {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    background: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.featured-item .listing-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.featured-item .listing-address {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #1d2327;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.featured-item .listing-meta {
+    font-size: 13px;
+    color: #646970;
+}
+
+.featured-item .listing-id {
+    font-family: 'SF Mono', Consolas, Monaco, monospace;
+    font-size: 11px;
+    color: #646970;
+    background: #f0f0f1;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.featured-item .remove-item {
+    color: #d63638;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 18px;
+    opacity: 0.5;
+    transition: opacity 0.2s, transform 0.2s;
+    border-radius: var(--radius-sm);
+}
+
+.featured-item .remove-item:hover {
+    opacity: 1;
+    background: rgba(214, 54, 56, 0.08);
+}
+
+/* ============================================
+   Actions Bar
+   ============================================ */
+
+.property-spotlight-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f1;
+    margin-top: 8px;
+}
+
+.property-spotlight-actions .button-primary {
+    padding: 6px 20px;
+    height: auto;
+    font-size: 14px;
+}
+
+/* Usage section */
+.property-spotlight-usage code {
+    display: inline-block;
+    background: #f0f0f1;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    margin: 4px 0;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+}
+
+.property-spotlight-usage > p {
+    margin-bottom: 8px;
+    color: #50575e;
+}
+
+.property-spotlight-usage table {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.property-spotlight-usage table code {
+    background: transparent;
+    padding: 0;
+}
+
+.property-spotlight-usage table th {
+    font-weight: 600;
+}
+
+.property-spotlight-usage h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1d2327;
+}
+
+/* Shortcode examples */
+.shortcode-examples {
+    display: grid;
+    gap: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.shortcode-examples .example-item {
+    background: #f6f7f7;
+    border: 1px solid #ddd;
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+}
+
+.shortcode-examples .example-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #50575e;
+    font-size: 13px;
+}
+
+.shortcode-examples .example-item code {
+    display: block;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    padding: 8px 12px;
+    margin: 0;
+    word-break: break-all;
+}
+
+/* Style Settings */
+.property-spotlight-style-settings .form-table {
+    margin-top: 0;
+}
+
+.property-spotlight-style-settings .form-table th {
+    width: 180px;
+    padding-left: 0;
+    vertical-align: middle;
+}
+
+.property-spotlight-style-settings .form-table td {
+    vertical-align: middle;
+}
+
+.property-spotlight-style-settings input[type="color"] {
+    width: 50px;
+    height: 34px;
+    padding: 2px;
+    border: 1px solid #8c8f94;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.property-spotlight-style-settings input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 2px;
+}
+
+.property-spotlight-style-settings input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: var(--radius-xs);
+}
+
+.property-spotlight-style-settings input[type="text"].small-text {
+    width: 80px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.property-spotlight-style-settings input[type="range"] {
+    width: 200px;
+    vertical-align: middle;
+}
+
+.property-spotlight-style-settings #style-border-radius-value {
+    display: inline-block;
+    width: 50px;
+    margin-left: 12px;
+    font-weight: 600;
+}
+
+.property-spotlight-style-settings .description {
+    margin-top: 4px;
+}
+
+/* Style Presets */
+.style-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.style-presets .button {
+    min-width: 100px;
+}
+
+#style-status {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+#style-status.success {
+    color: #00a32a;
+}
+
+#style-status.error {
+    color: #d63638;
+}
+
+/* Loading state */
+.property-spotlight-loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.property-spotlight-loading::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-top-color: #2271b1;
+    border-radius: var(--radius-full);
+    animation: spin 0.8s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================
+   Listing Schedule (within featured item)
+   ============================================ */
+
+.featured-item .listing-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 220px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.featured-item .schedule-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.featured-item .schedule-row label {
+    font-size: 12px;
+    color: #646970;
+    min-width: 40px;
+    font-weight: 500;
+}
+
+.featured-item .schedule-row input[type="date"] {
+    font-size: 13px;
+    padding: 6px 10px;
+    border: 1px solid #dcdcde;
+    border-radius: var(--radius-sm);
+    width: 140px;
+    transition: border-color 0.2s;
+}
+
+.featured-item .schedule-row input[type="date"]:focus {
+    border-color: #2271b1;
+    outline: none;
+}
+
+/* Date display helper text */
+.featured-item .date-display {
+    font-size: 12px;
+    color: #646970;
+    margin-left: 8px;
+}
+
+.featured-item .item-status {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.featured-item .item-status.status-active {
+    background: rgba(0, 163, 42, 0.12);
+    color: #00a32a;
+}
+
+.featured-item .item-status.status-scheduled {
+    background: rgba(221, 153, 0, 0.12);
+    color: #996800;
+}
+
+.featured-item .item-status.status-expired {
+    background: rgba(214, 54, 56, 0.12);
+    color: #d63638;
+}
+
+/* Automation Settings */
+.property-spotlight-automation .form-table th {
+    width: 180px;
+    padding-left: 0;
+}
+
+.property-spotlight-automation input[type="number"] {
+    width: 60px;
+}
+
+.property-spotlight-automation input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+#automation-status {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+#automation-status.success {
+    color: #00a32a;
+}
+
+#automation-status.error {
+    color: #d63638;
+}
+
+/* ============================================
+   Import/Export Section
+   ============================================ */
+
+.property-spotlight-import-export .import-export-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.property-spotlight-import-export .export-action,
+.property-spotlight-import-export .import-action {
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-lg);
+}
+
+.property-spotlight-import-export .export-action .button,
+.property-spotlight-import-export .import-action .button {
+    margin-bottom: 8px;
+}
+
+.property-spotlight-import-export .import-action {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.property-spotlight-import-export #import-filename {
+    font-style: italic;
+    color: #646970;
+    font-size: 13px;
+}
+
+#import-export-status {
+    display: block;
+    margin-top: 16px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+}
+
+#import-export-status.success {
+    color: #00a32a;
+    background: rgba(0, 163, 42, 0.08);
+}
+
+#import-export-status.error {
+    color: #d63638;
+    background: rgba(214, 54, 56, 0.08);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 960px) {
+    .property-spotlight-tab-nav {
+        flex-wrap: wrap;
+    }
+    
+    .property-spotlight-tab-nav .tab-button {
+        flex: 1;
+        text-align: center;
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 782px) {
+    .property-spotlight-tab-nav {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .property-spotlight-tab-nav .tab-button {
+        border-radius: 0;
+        border-bottom: 1px solid #c3c4c7;
+        margin-bottom: 0;
+    }
+    
+    .property-spotlight-tab-nav .tab-button.active {
+        box-shadow: 4px 0 0 #2271b1 inset;
+        border-bottom-color: #c3c4c7;
+    }
+    
+    .property-spotlight-tab-content {
+        padding: 16px;
+    }
+    
+    .property-spotlight-section {
+        padding: 16px;
+    }
+    
+    .property-spotlight-section .form-table th {
+        display: block;
+        width: 100%;
+        padding-bottom: 4px;
+    }
+    
+    .property-spotlight-section .form-table td {
+        display: block;
+        padding-top: 0;
+    }
+    
+    .property-spotlight-add-methods {
+        flex-direction: column;
+    }
+    
+    .method-dropdown,
+    .method-manual {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+    }
+    
+    .method-divider {
+        padding: 12px 0;
+    }
+    
+    .featured-item {
+        flex-wrap: wrap;
+        padding: 12px;
+    }
+    
+    .featured-item .listing-image {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .featured-item .listing-info {
+        flex: 1 1 calc(100% - 100px);
+    }
+    
+    .featured-item .listing-schedule {
+        width: 100%;
+        margin-top: 12px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .featured-item .listing-id {
+        order: 10;
+        margin-top: 8px;
+    }
+    
+    .property-spotlight-import-export .import-export-actions {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .property-spotlight-actions {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,17 @@
+# Build artifacts
+*.zip
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# WordPress
+wp-content/
+
+# Local development
+docker-compose.override.yml

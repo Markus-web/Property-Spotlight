@@ -1,0 +1,1336 @@
+# Finnish translation for Property Spotlight
+# Copyright (C) 2024 Markus Media
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Property Spotlight 1.0.0\n"
+"Report-Msgid-Bugs-To: https://markusmedia.fi\n"
+"POT-Creation-Date: 2024-01-15 12:00:00+00:00\n"
+"PO-Revision-Date: 2024-01-15 12:00:00+00:00\n"
+"Last-Translator: Markus Media <info@markusmedia.fi>\n"
+"Language-Team: Finnish <fi@li.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: property-spotlight.php
+msgid "Settings"
+msgstr "Asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listings"
+msgstr "Kohteet"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Style"
+msgstr "Tyyli"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Documentation"
+msgstr "Ohjeet"
+
+#: property-spotlight.php
+msgid "Property Spotlight:"
+msgstr "Näyteikkuna:"
+
+#: property-spotlight.php
+msgid "API credentials need to be configured."
+msgstr "API-tunnukset tulee määrittää."
+
+#: property-spotlight.php
+msgid "Configure now"
+msgstr "Määritä nyt"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Property Spotlight"
+msgstr "Näyteikkuna"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Select and order the property listings you want to feature on your website."
+msgstr "Valitse ja järjestä kohteet, jotka haluat nostaa esille sivustollasi."
+
+#: includes/class-property-spotlight-admin.php
+msgid "API Settings"
+msgstr "API-asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Configure Linear.fi API credentials to fetch listings. If the official Linear plugin is installed, this plugin can use those credentials automatically. You can also configure separate credentials here."
+msgstr "Määritä Linear.fi API-tunnukset kohteiden hakemiseen. Jos virallinen Linear-lisäosa on asennettuna, tämä lisäosa voi käyttää näitä tunnuksia automaattisesti. Voit myös määrittää erilliset tunnukset tässä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Using official Linear plugin credentials."
+msgstr "Käyttää virallisen Linear-lisäosan tunnuksia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "No separate configuration needed. You can optionally configure your own credentials below."
+msgstr "Erillistä määritystä ei tarvita. Voit halutessasi määrittää omat tunnukset alla."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Currently using credentials from the official Linear plugin."
+msgstr "Käyttää tällä hetkellä virallisen Linear-lisäosan tunnuksia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "You can optionally configure separate credentials below."
+msgstr "Voit halutessasi määrittää erilliset tunnukset alla."
+
+#: includes/class-property-spotlight-admin.php
+msgid "API credentials required."
+msgstr "API-tunnukset vaaditaan."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Configure API credentials below, or set up the official Linear plugin first."
+msgstr "Määritä API-tunnukset alla tai aseta virallinen Linear-lisäosa ensin."
+
+#: includes/class-property-spotlight-admin.php
+msgid "API credentials are required to fetch listings from Linear.fi."
+msgstr "API-tunnukset vaaditaan kohteiden hakemiseen Linear.fi:stä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Using custom API credentials."
+msgstr "Käyttää mukautettuja API-tunnuksia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Settings are independent from the official Linear plugin."
+msgstr "Asetukset ovat riippumattomia virallisesta Linear-lisäosasta."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Using custom credentials configured below."
+msgstr "Käyttää alla määritettyjä mukautettuja tunnuksia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Data URL"
+msgstr "Data URL"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Using official plugin setting"
+msgstr "Käyttää virallisen lisäosan asetusta"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Linear API data endpoint URL. Default: https://data.linear.fi. Only change if using a test or custom endpoint."
+msgstr "Linear API:n data-osoite. Oletus: https://data.linear.fi. Muuta vain, jos käytät testi- tai mukautettua osoitetta."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Linear API data endpoint URL."
+msgstr "Linear API:n data-osoite."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Client Secret"
+msgstr "Asiakassalaisuus"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Your Linear API client secret key."
+msgstr "Linear API:n asiakassalaisuusavain."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Save API Settings"
+msgstr "Tallenna API-asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Clear (Use Official Plugin)"
+msgstr "Tyhjennä (käytä virallista lisäosaa)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Clear Cache"
+msgstr "Tyhjennä välimuisti"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use if listings aren't updating or after making changes."
+msgstr "Käytä, jos kohteet eivät päivity tai olet tehnyt muutoksia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "API Key"
+msgstr "API-avain"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Your Linear API key (include the LINEAR-API-KEY prefix). Obtain from your Linear.fi account or support documentation. Keep this secure."
+msgstr "Linear API-avain (sisällytä LINEAR-API-KEY-etuliite). Hanki Linear.fi-tilistäsi tai tukidokumentaatiosta. Pidä turvassa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Your Linear API key (include the LINEAR-API-KEY prefix)."
+msgstr "Linear API-avaimesi (sisällytä LINEAR-API-KEY-etuliite)."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Add Featured Listing"
+msgstr "Lisää nostettava kohde"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Add listings to your featured list. Search from available listings or enter a listing ID manually."
+msgstr "Lisää kohteita nostettujen listalle. Hae saatavilla olevista kohteista tai syötä kohteen tunnus manuaalisesti."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Search and select from available listings:"
+msgstr "Hae ja valitse saatavilla olevista kohteista:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Select from available listings:"
+msgstr "Valitse saatavilla olevista kohteista:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Search listings..."
+msgstr "Hae kohteita..."
+
+#: includes/class-property-spotlight-admin.php
+msgid "OR"
+msgstr "TAI"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Or enter listing ID manually:"
+msgstr "Tai syötä kohteen tunnus manuaalisesti:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Enter listing ID manually:"
+msgstr "Syötä kohteen tunnus manuaalisesti:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "e.g., ABC123"
+msgstr "esim. ABC123"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Add"
+msgstr "Lisää"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Featured Listings"
+msgstr "Nostetut kohteet"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Drag listings to reorder. The order here determines how they appear on your website."
+msgstr "Vedä kohteita järjestääksesi. Järjestys määrittää, miten ne näkyvät sivustollasi."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Drag to reorder. The order here determines display order on the frontend."
+msgstr "Vedä järjestääksesi. Järjestys määrittää näyttöjärjestyksen sivustolla."
+
+#: includes/class-property-spotlight-admin.php
+msgid "No featured listings yet. Use the options above to add your first listing."
+msgstr "Nostettuja kohteita ei ole vielä. Käytä yllä olevia vaihtoehtoja lisätäksesi ensimmäisen kohteen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "No featured listings selected. Use the options above to add listings."
+msgstr "Nostettuja kohteita ei ole valittu. Käytä yllä olevia vaihtoehtoja lisätäksesi kohteita."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Changes take effect immediately after saving."
+msgstr "Muutokset tulevat voimaan heti tallennuksen jälkeen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Style Settings"
+msgstr "Tyylin asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Customize the appearance of your listings. Colors are applied globally via CSS variables. Use presets for quick styling or customize individual colors."
+msgstr "Muokkaa kohteiden ulkoasua. Värit määritetään globaalisti CSS-muuttujien kautta. Käytä esiasetuksia nopeaan tyylittelyyn tai muokkaa yksittäisiä värejä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Primary Color"
+msgstr "Pääväri"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Text and headings color. Use dark colors for light backgrounds, light colors for dark themes."
+msgstr "Tekstin ja otsikoiden väri. Käytä tummia värejä vaaleille taustoille, vaaleita värejä tummille teemoille."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Accent Color"
+msgstr "Korostusväri"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Links and hover states. Should complement your primary color and provide visual contrast."
+msgstr "Linkkien ja hover-tilojen väri. Täydentää pääväriäsi ja tarjoaa visuaalista kontrastia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Price Color"
+msgstr "Hinnan väri"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Price text color. Use a bold or contrasting color to make prices stand out."
+msgstr "Hintatekstin väri. Käytä rohkeaa tai kontrastista väriä korostaaksesi hintoja."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Featured Background"
+msgstr "Nostetun tausta"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Background for \"featured\" style cards (NÄYTEIKKUNA). Only visible when using style=\"featured\" in shortcodes. Choose a vibrant color that contrasts with white text."
+msgstr "\"Nostettu\"-tyylin korttien taustaväri (NÄYTEIKKUNA). Näkyy vain, kun käytät style=\"featured\" lyhytkoodeissa. Valitse eloisa väri, joka kontrastoi valkoisen tekstin kanssa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Border Radius"
+msgstr "Reunan pyöristys"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Card corner roundness. Range: 0px (sharp) to 24px (very rounded). Lower values (0-6px) for professional, higher (16-24px) for softer look."
+msgstr "Kortin kulmien pyöreys. Alue: 0px (terävä) - 24px (hyvin pyöristetty). Alhaiset arvot (0-6px) ammattimaiselle, korkeat (16-24px) pehmeämmälle ulkoasulle."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Presets"
+msgstr "Esiasetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Pre-configured color schemes inspired by popular Finnish property websites. You can customize individual colors after applying a preset."
+msgstr "Esivalmistellut värimallinnukset, jotka on inspiroitu suosituista suomalaisista kiinteistösivustoista. Voit muokata yksittäisiä värejä esiasetuksen soveltamisen jälkeen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Kiinteistökolmio"
+msgstr "Kiinteistökolmio"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Oikotie"
+msgstr "Oikotie"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Nettiauto"
+msgstr "Nettiauto"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Minimal"
+msgstr "Minimaalinen"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Reset to Default"
+msgstr "Palauta oletukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Save Style Settings"
+msgstr "Tallenna tyylin asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "API settings required."
+msgstr "API-asetukset vaaditaan."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Configure API settings in the Settings tab to start selecting featured listings."
+msgstr "Määritä API-asetukset Asetukset-välilehdessä aloittaaksesi nostettujen kohteiden valitsemisen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Configure API settings above to start selecting featured listings."
+msgstr "Määritä yllä olevat API-asetukset aloittaaksesi nostettujen kohteiden valitsemisen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Usage"
+msgstr "Käyttö"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Shortcode"
+msgstr "Lyhytkoodi"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use the shortcode to display featured listings anywhere on your site."
+msgstr "Käytä lyhytkoodia näyttääksesi nostetut kohteet missä tahansa sivustollasi."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Shortcode Attributes"
+msgstr "Lyhytkoodin attribuutit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Shortcode Options"
+msgstr "Lyhytkoodin asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Attribute"
+msgstr "Attribuutti"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Description"
+msgstr "Kuvaus"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Default"
+msgstr "Oletus"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Values"
+msgstr "Arvot"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Maximum number of listings to display"
+msgstr "Näytettävien kohteiden enimmäismäärä"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Any number (1, 2, 3...)"
+msgstr "Mikä tahansa numero (1, 2, 3...)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Display layout style"
+msgstr "Näyttöasettelun tyyli"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Card design style (Nettiauto-inspired)"
+msgstr "Kortin muotoilutyyli (Nettiauto-inspiroitu)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Section header title (e.g., \"NÄYTEIKKUNA\")"
+msgstr "Osion otsikko (esim. \"NÄYTEIKKUNA\")"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Any text"
+msgstr "Mikä tahansa teksti"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Additional CSS class for styling"
+msgstr "Lisä CSS-luokka muotoiluun"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Any CSS class name"
+msgstr "Mikä tahansa CSS-luokan nimi"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show or hide the price"
+msgstr "Näytä tai piilota hinta"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show or hide the address"
+msgstr "Näytä tai piilota osoite"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show or hide the listing image"
+msgstr "Näytä tai piilota kohteen kuva"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show or hide the city/location"
+msgstr "Näytä tai piilota kaupunki/sijainti"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show or hide property details (type, rooms, area)"
+msgstr "Näytä tai piilota kohteen tiedot (tyyppi, huoneet, pinta-ala)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Language for listing content"
+msgstr "Kohteen sisällön kieli"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Auto-detected"
+msgstr "Automaattinen"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Basic Examples"
+msgstr "Perusesimerkit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show all featured listings in a 3-column grid:"
+msgstr "Näytä kaikki nostetut kohteet 3-sarakkeisena ruudukkona:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "All"
+msgstr "Kaikki"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Display layout: grid, list, or carousel"
+msgstr "Näyttöasettelu: ruudukko, lista tai karuselli"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Number of columns (grid layout only)"
+msgstr "Sarakkeiden määrä (vain ruudukkoasettelu)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Examples"
+msgstr "Esimerkit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show first 3 listings:"
+msgstr "Näytä ensimmäiset 3 kohdetta:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show listings in a 2-column grid:"
+msgstr "Näytä kohteet 2-sarakkeisena ruudukkona:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show listings as a vertical list:"
+msgstr "Näytä kohteet pystylistana:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Show listings in a carousel/slider:"
+msgstr "Näytä kohteet karusellissa/liukusäätimessä:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Nettiauto-Style Examples"
+msgstr "Nettiauto-tyyliset esimerkit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "NÄYTEIKKUNA - Featured style with red overlay (like Nettiauto):"
+msgstr "NÄYTEIKKUNA - Nostettu tyyli punaisella päällyksellä (kuten Nettiauto):"
+
+#: includes/class-property-spotlight-admin.php
+msgid "NÄYTEIKKUNA - Showcase style with white cards:"
+msgstr "NÄYTEIKKUNA - Näyteikkunatyyli valkoisilla korteilla:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Compact cards for smaller spaces:"
+msgstr "Kompaktit kortit pienempiin tiloihin:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Dark theme for dark backgrounds:"
+msgstr "Tumma teema tummille taustoille:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Advanced Examples"
+msgstr "Edistyneet esimerkit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Homepage hero section - 3 featured properties:"
+msgstr "Etusivun pääosio - 3 nostettua kohdetta:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Sidebar widget - compact list:"
+msgstr "Sivupalkin vimpain - kompakti lista:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Full-width carousel:"
+msgstr "Koko leveyden karuselli:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Mobile-friendly 1-column layout:"
+msgstr "Mobiiliystävällinen 1-sarakkeen asettelu:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Minimal display (address only):"
+msgstr "Minimaalinen näyttö (vain osoite):"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Gutenberg Block"
+msgstr "Gutenberg-lohko"
+
+#: includes/class-property-spotlight-admin.php
+msgid "For the block editor, search for \"Property Spotlight\" in the block inserter. The block provides a visual interface with the same options as the shortcode."
+msgstr "Etsi lohkoeditorissa \"Näyteikkuna\" lohkovalitsimesta. Lohko tarjoaa visuaalisen käyttöliittymän samoilla asetuksilla kuin lyhytkoodi."
+
+#: includes/class-property-spotlight-admin.php
+msgid "PHP Template Usage"
+msgstr "PHP-mallien käyttö"
+
+#: includes/class-property-spotlight-admin.php
+msgid "To use in theme templates, use the do_shortcode function:"
+msgstr "Käyttääksesi teeman malleissa, käytä do_shortcode-funktiota:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "CSS Customization"
+msgstr "CSS-muokkaus"
+
+#: includes/class-property-spotlight-admin.php
+msgid "The plugin uses these CSS classes for styling:"
+msgstr "Lisäosa käyttää näitä CSS-luokkia muotoiluun:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Class"
+msgstr "Luokka"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Main container"
+msgstr "Pääsäiliö"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Grid layout modifier"
+msgstr "Ruudukkoasettelun muokkain"
+
+#: includes/class-property-spotlight-admin.php
+msgid "List layout modifier"
+msgstr "Lista-asettelun muokkain"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Carousel layout modifier"
+msgstr "Karuselliasettelun muokkain"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Individual listing card"
+msgstr "Yksittäinen kohdekortti"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listing image container"
+msgstr "Kohteen kuvasäiliö"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listing content area"
+msgstr "Kohteen sisältöalue"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listing title/address"
+msgstr "Kohteen otsikko/osoite"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Price display"
+msgstr "Hintanäyttö"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Location info"
+msgstr "Sijaintitiedot"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Property details (rooms, area, etc.)"
+msgstr "Kohteen tiedot (huoneet, pinta-ala jne.)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Search for \"Property Spotlight\" in the block inserter."
+msgstr "Etsi \"Näyteikkuna\" lohkovalitsimesta."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Permission denied"
+msgstr "Käyttö estetty"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Settings saved"
+msgstr "Asetukset tallennettu"
+
+#: includes/class-property-spotlight-admin.php
+msgid "API settings saved"
+msgstr "API-asetukset tallennettu"
+
+#: includes/class-property-spotlight-api.php
+msgid "API credentials not configured"
+msgstr "API-tunnuksia ei ole määritetty"
+
+#: includes/class-property-spotlight-api.php
+msgid "API returned status %d"
+msgstr "API palautti tilan %d"
+
+#: includes/class-property-spotlight-api.php
+msgid "Invalid API response"
+msgstr "Virheellinen API-vastaus"
+
+#: includes/class-property-spotlight-shortcode.php
+msgid "No featured listings found."
+msgstr "Nostettuja kohteita ei löytynyt."
+
+#: includes/class-property-spotlight-shortcode.php
+msgid "rooms"
+msgstr "huonetta"
+
+#: includes/class-property-spotlight-shortcode.php
+msgid "View listing"
+msgstr "Näytä kohde"
+
+#: includes/class-property-spotlight-shortcode.php
+msgid "Previous"
+msgstr "Edellinen"
+
+#: includes/class-property-spotlight-shortcode.php
+msgid "Next"
+msgstr "Seuraava"
+
+#: blocks/spotlight/block.json
+msgid "Display featured Linear.fi property listings"
+msgstr "Näytä nostetut Linear.fi-kohteet"
+
+#: blocks/spotlight/index.js
+msgid "Limit"
+msgstr "Raja"
+
+#: blocks/spotlight/index.js
+msgid "Layout"
+msgstr "Asettelu"
+
+#: blocks/spotlight/index.js
+msgid "Grid"
+msgstr "Ruudukko"
+
+#: blocks/spotlight/index.js
+msgid "List"
+msgstr "Lista"
+
+#: blocks/spotlight/index.js
+msgid "Carousel"
+msgstr "Karuselli"
+
+#: blocks/spotlight/index.js
+msgid "Columns"
+msgstr "Sarakkeet"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Saving..."
+msgstr "Tallennetaan..."
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Saved!"
+msgstr "Tallennettu!"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Error saving settings"
+msgstr "Virhe asetusten tallentamisessa"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Loading listings..."
+msgstr "Ladataan kohteita..."
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "No listings found"
+msgstr "Kohteita ei löytynyt"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Search listings by address or ID..."
+msgstr "Hae kohteita osoitteen tai tunnuksen perusteella..."
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Remove this listing from featured?"
+msgstr "Poistetaanko kohde nostetuista?"
+
+#: assets/js/admin.js
+msgid "Are you sure you want to clear custom credentials?"
+msgstr "Haluatko varmasti tyhjentää mukautetut tunnukset?"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Cache cleared"
+msgstr "Välimuisti tyhjennetty"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Style settings saved"
+msgstr "Tyylin asetukset tallennettu"
+
+#: blocks/spotlight/index.js
+msgid "Display featured property listings"
+msgstr "Näytä nostetut kohteet"
+
+#: blocks/spotlight/index.js
+msgid "Display Settings"
+msgstr "Näyttöasetukset"
+
+#: blocks/spotlight/index.js
+msgid "0 = show all featured listings"
+msgstr "0 = näytä kaikki nostetut kohteet"
+
+#: blocks/spotlight/index.js
+msgid "Error loading listings"
+msgstr "Virhe kohteiden latauksessa"
+
+#: blocks/spotlight/index.js
+msgid "Unknown address"
+msgstr "Tuntematon osoite"
+
+#: blocks/spotlight/index.js
+msgid "No featured listings selected. Go to Property Spotlight settings to select listings."
+msgstr "Nostettuja kohteita ei ole valittu. Siirry Näyteikkuna-asetuksiin valitaksesi kohteita."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Automation Settings"
+msgstr "Automaatioasetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Automatically manage your featured listings: remove outdated ones, hide sold properties, and track user engagement."
+msgstr "Hallitse nostettuja kohteita automaattisesti: poista vanhentuneet, piilota myydyt kiinteistöt ja seuraa käyttäjien kiinnostusta."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Auto-expire after"
+msgstr "Vanhene automaattisesti"
+
+#: includes/class-property-spotlight-admin.php
+msgid "days"
+msgstr "päivän jälkeen"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Automatically remove listings from featured after this many days. Set to 0 to disable. Common: 30 days for monthly rotation."
+msgstr "Poista kohteet automaattisesti nostetuista tämän päivämäärän jälkeen. Aseta 0 poistaaksesi käytöstä. Yleinen: 30 päivää kuukausittaiselle kierrolle."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Automatically remove listings from featured after this many days. Set to 0 to disable."
+msgstr "Poista kohteet automaattisesti nostetuista tämän päivämäärän jälkeen. Aseta 0 poistaaksesi käytöstä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Sold Listings"
+msgstr "Myydyt kohteet"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Automatically hide sold/rented listings"
+msgstr "Piilota myydyt/vuokratut kohteet automaattisesti"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listings with status \"sold\" or \"rented\" will not be displayed. Checks status from API automatically."
+msgstr "Kohteet, joiden tila on \"myyty\" tai \"vuokrattu\", eivät näy. Tarkistaa tilan API:sta automaattisesti."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listings with status \"sold\" or \"rented\" will not be displayed."
+msgstr "Kohteet, joiden tila on \"myyty\" tai \"vuokrattu\", eivät näy."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Analytics"
+msgstr "Analytiikka"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Enable click and impression tracking"
+msgstr "Ota käyttöön klikkausten ja näyttökertojen seuranta"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Fires events to Google Analytics 4, GTM, and Matomo when listings are viewed or clicked. Tracks listing ID, address, and position."
+msgstr "Lähettää tapahtumat Google Analytics 4:ään, GTM:ään ja Matomoon, kun kohteita katsotaan tai klikataan. Seuraa kohteen ID:tä, osoitetta ja sijaintia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Fires events to Google Analytics 4, GTM, and Matomo when listings are viewed or clicked."
+msgstr "Lähettää tapahtumat Google Analytics 4:ään, GTM:ään ja Matomoon kun kohteita katsotaan tai klikataan."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Save Automation Settings"
+msgstr "Tallenna automaatioasetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Import / Export"
+msgstr "Tuo / Vie"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Backup your featured listings configuration or transfer to another site. Export includes all settings: featured listings, API credentials, style settings, and automation preferences (JSON format)."
+msgstr "Varmuuskopioi nostettujen kohteiden asetukset tai siirrä toiselle sivustolle. Vienti sisältää kaikki asetukset: nostetut kohteet, API-tunnukset, tyylin asetukset ja automaatioasetukset (JSON-muoto)."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Backup your featured listings configuration or transfer to another site."
+msgstr "Varmuuskopioi nostettujen kohteiden asetukset tai siirrä toiselle sivustolle."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Export Settings"
+msgstr "Vie asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Download a JSON file with all settings. Use before major changes or site migrations."
+msgstr "Lataa JSON-tiedosto kaikilla asetuksilla. Käytä ennen suuria muutoksia tai sivuston siirtoja."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Download a JSON file with all settings."
+msgstr "Lataa JSON-tiedosto kaikilla asetuksilla."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Import Settings"
+msgstr "Tuo asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Upload a previously exported JSON file. This will replace all current settings. Export a backup first if needed."
+msgstr "Lataa aiemmin viety JSON-tiedosto. Tämä korvaa kaikki nykyiset asetukset. Vie varmuuskopio ensin tarvittaessa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Upload a previously exported JSON file."
+msgstr "Lataa aiemmin viety JSON-tiedosto."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Automation settings saved"
+msgstr "Automaatioasetukset tallennettu"
+
+#: includes/class-property-spotlight-admin.php
+msgid "No data provided"
+msgstr "Tietoja ei annettu"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Invalid JSON format"
+msgstr "Virheellinen JSON-muoto"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Invalid settings format"
+msgstr "Virheellinen asetusten muoto"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Settings imported successfully from version %s"
+msgstr "Asetukset tuotu onnistuneesti versiosta %s"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Exporting..."
+msgstr "Viedään..."
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Settings exported"
+msgstr "Asetukset viety"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Importing..."
+msgstr "Tuodaan..."
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Start"
+msgstr "Alku"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "End"
+msgstr "Loppu"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Active"
+msgstr "Aktiivinen"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Scheduled"
+msgstr "Ajastettu"
+
+#: includes/class-property-spotlight-admin.php (JavaScript)
+msgid "Expired"
+msgstr "Vanhentunut"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Quick Start"
+msgstr "Pika-aloitus"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Get up and running in three simple steps:"
+msgstr "Aloita kolmessa yksinkertaisessa vaiheessa:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Configure your API settings in the"
+msgstr "Määritä API-asetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "tab above"
+msgstr "välilehdellä yllä"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Add featured listings in the"
+msgstr "Lisää nostettuja kohteita"
+
+#: includes/class-property-spotlight-admin.php
+msgid "tab"
+msgstr "välilehdellä"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use the shortcode below to display listings anywhere on your site"
+msgstr "Käytä alla olevaa lyhytkoodia näyttääksesi kohteet missä tahansa sivustollasi"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Most common use case:"
+msgstr "Yleisin käyttötapaus:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "This displays your first 3 featured listings in a responsive 3-column grid - perfect for homepage hero sections."
+msgstr "Tämä näyttää kolme ensimmäistä nostettua kohdetta responsiivisessa 3-sarakkeisessa ruudukossa - täydellinen etusivun pääosioon."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Property Spotlight offers multiple ways to display your featured listings. Choose the method that best fits your workflow:"
+msgstr "Näyteikkuna tarjoaa useita tapoja näyttää nostetut kohteet. Valitse työskentelytapasi mukaiseksi sopivin menetelmä:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "The shortcode is the most flexible method. Simply paste it into any post, page, or widget area. Works with both the Classic and Block editors."
+msgstr "Lyhytkoodi on joustavin menetelmä. Liitä se mihin tahansa artikkeliin, sivuun tai vimpainalueeseen. Toimii sekä perinteisessä että lohkoeditorissa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "This basic shortcode displays all your featured listings in the default 3-column grid layout."
+msgstr "Tämä peruslyhytkoodi näyttää kaikki nostetut kohteet oletusarvoisessa 3-sarakkeisessa ruudukossa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Shortcode Attributes"
+msgstr "Lyhytkoodin attribuutit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Customize the appearance and behavior of your listings with these attributes. All attributes are optional."
+msgstr "Muokkaa kohteiden ulkoasua ja toimintaa näillä attribuuteilla. Kaikki attribuutit ovat valinnaisia."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Control how many listings appear. Useful for homepage hero sections or limiting sidebar widgets. Leave empty to show all featured listings."
+msgstr "Hallitse näytettävien kohteiden määrää. Hyödyllinen etusivun pääosioihin tai sivupalkin vimpainten rajoittamiseen. Jätä tyhjäksi näyttääksesi kaikki nostetut kohteet."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Choose how listings are arranged: grid for card layouts, list for vertical stacking, or carousel for interactive sliders."
+msgstr "Valitse kohteiden järjestelytapa: ruudukko korttiasetteluun, lista pystysuuntaiseen pinoamiseen tai karuselli interaktiivisiin liukusäätimeen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Match your site's design with pre-built styles inspired by popular Finnish property sites. Featured style adds a colored overlay badge."
+msgstr "Sovita sivustosi design valmiilla tyyleillä, jotka on inspiroitu suosituista suomalaisista kiinteistösivustoista. Nostettu-tyyli lisää värillisen päällyksen merkin."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Number of columns in grid layout. Responsive: automatically adjusts on mobile devices. Use 1 column for mobile-first designs."
+msgstr "Sarakkeiden määrä ruudukkoasettelussa. Responsiivinen: sopeutuu automaattisesti mobiililaitteilla. Käytä 1 saraketta mobiili-ensimmäisiin suunnitteluihin."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Add a section header above your listings. Perfect for sections like \"NÄYTEIKKUNA\" or \"Featured Properties\"."
+msgstr "Lisää osion otsikko kohteiden yläpuolelle. Täydellinen osioille kuten \"NÄYTEIKKUNA\" tai \"Nostetut kohteet\"."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Add custom CSS classes for advanced styling. Useful for theme integration or custom design requirements."
+msgstr "Lisää mukautettuja CSS-luokkia edistyneeseen muotoiluun. Hyödyllinen teeman integrointiin tai mukautettuihin suunnitteluvaatimuksiin."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Toggle price display. Set to false for teaser sections or when price information is displayed elsewhere."
+msgstr "Vaihda hinnan näyttö. Aseta false-teaser-osiossa tai kun hintatiedot näytetään muualla."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Toggle address display. Useful for compact layouts where space is limited."
+msgstr "Vaihda osoitteen näyttö. Hyödyllinen kompakteissa asetteluissa, joissa tilaa on rajoitetusti."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Toggle listing images. Hide images for text-only layouts or sidebar widgets with limited space."
+msgstr "Vaihda kohteen kuvien näyttö. Piilota kuvat tekstipainotteisissa asetteluissa tai sivupalkin vimpainten rajoitetussa tilassa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Toggle city/location display. Useful when location is already clear from context or page title."
+msgstr "Vaihda kaupungin/sijainnin näyttö. Hyödyllinen, kun sijainti on jo selvä kontekstista tai sivun otsikosta."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Toggle property details (type, rooms, area). Hide for minimal designs or when details are shown elsewhere on the page."
+msgstr "Vaihda kohteen tietojen näyttö (tyyppi, huoneet, pinta-ala). Piilota minimaalisissa suunnitteluissa tai kun tiedot näytetään muualla sivulla."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Override automatic language detection. Use when you need listings in a specific language regardless of site language."
+msgstr "Ohita automaattinen kielitunnistus. Käytä, kun tarvitset kohteet tietyllä kielellä riippumatta sivuston kielestä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Common Examples"
+msgstr "Yleiset esimerkit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "These examples cover the most common use cases. Copy and paste into your posts, pages, or widgets."
+msgstr "Nämä esimerkit kattavat yleisimmät käyttötapaukset. Kopioi ja liitä artikkeleihin, sivuihin tai vimpaineisiin."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Default display - All listings in 3-column grid:"
+msgstr "Oletusnäyttö - Kaikki kohteet 3-sarakkeisessa ruudukossa:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Perfect starting point. Shows all your featured listings in a responsive grid."
+msgstr "Täydellinen lähtökohta. Näyttää kaikki nostetut kohteet responsiivisessa ruudukossa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Homepage hero - 3 featured properties:"
+msgstr "Etusivun pääosio - 3 nostettua kohdetta:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Ideal for homepage hero sections. Displays exactly 3 listings in a clean grid."
+msgstr "Ihanteellinen etusivun pääosioihin. Näyttää tasan 3 kohdetta siistissä ruudukossa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "2-column layout:"
+msgstr "2-sarakkeinen asettelu:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Wider cards, perfect for content areas with more horizontal space."
+msgstr "Leveämmät kortit, täydellinen sisältöalueille, joissa on enemmän vaakasuuntaista tilaa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Vertical list layout:"
+msgstr "Pystylista-asettelu:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Stack listings vertically. Great for sidebars or narrow content areas."
+msgstr "Pinota kohteet pystysuunnassa. Loistava sivupalkkeihin tai kapeisiin sisältöalueisiin."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Carousel slider:"
+msgstr "Karuselli-liukusäädin:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Interactive slider with navigation. Best for showcasing multiple listings in limited space."
+msgstr "Interaktiivinen liukusäädin navigoinnilla. Paras useiden kohteiden esittelyyn rajoitetussa tilassa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Finnish Property Site Styles"
+msgstr "Suomalaisten kiinteistösivustojen tyylit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Pre-built styles inspired by popular Finnish property websites. Perfect for matching your site's design language."
+msgstr "Valmiit tyylit, jotka on inspiroitu suosituista suomalaisista kiinteistösivustoista. Täydellinen sivustosi suunnittelukielen vastaamiseen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "NÄYTEIKKUNA - Featured style with colored badge:"
+msgstr "NÄYTEIKKUNA - Nostettu tyyli värillisellä merkillä:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Nettiauto-inspired style with a prominent colored overlay badge. Perfect for highlighting premium listings."
+msgstr "Nettiauto-inspiroitu tyyli näkyvällä värillisellä päällyksen merkillä. Täydellinen premium-kohteiden korostamiseen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "NÄYTEIKKUNA - Clean showcase style:"
+msgstr "NÄYTEIKKUNA - Siisti näyteikkunatyyli:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "White cards with clean design. Professional look suitable for any property type."
+msgstr "Valkoiset kortit siistillä suunnittelulla. Ammattimainen ulkoasu, joka sopii mihin tahansa kiinteistötyyppiin."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Compact cards - 4 columns:"
+msgstr "Kompaktit kortit - 4 saraketta:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Smaller cards in a 4-column grid. Maximizes listings shown in limited vertical space."
+msgstr "Pienemmät kortit 4-sarakkeisessa ruudukossa. Maksimoi näytettävien kohteiden määrän rajoitetussa pystysuuntaisessa tilassa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Dark theme:"
+msgstr "Tumma teema:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Dark cards with light text. Ideal for dark backgrounds or modern design aesthetics."
+msgstr "Tummat kortit vaalealla tekstillä. Ihanteellinen tummille taustoille tai modernille suunnitteluaestetiikalle."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Real-World Use Cases"
+msgstr "Käytännön käyttötapaukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Practical examples for specific page locations and design requirements."
+msgstr "Käytännön esimerkit tietyille sivun sijainneille ja suunnitteluvaatimuksille."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Homepage hero section:"
+msgstr "Etusivun pääosio:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Full-width section with custom styling. Add your own CSS class for theme integration."
+msgstr "Koko leveyden osio mukautetulla muotoilulla. Lisää oma CSS-luokkasi teeman integrointia varten."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Sidebar widget:"
+msgstr "Sivupalkin vimpain:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Compact text-only list perfect for narrow sidebars. Images hidden to save space."
+msgstr "Kompakti tekstipainotteinen lista, täydellinen kapeisiin sivupalkkeihin. Kuvat piilotettu tilan säästämiseksi."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Full-width carousel banner:"
+msgstr "Koko leveyden karuselli-banneri:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Interactive slider spanning full page width. Great for above-the-fold content."
+msgstr "Interaktiivinen liukusäädin, joka ulottuu koko sivun leveydelle. Loistava yläosan sisällölle."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Mobile-optimized single column:"
+msgstr "Mobiilioptimoitu yksisarakkeinen:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Single column layout that works perfectly on all screen sizes. No responsive breakpoints needed."
+msgstr "Yksisarakkeinen asettelu, joka toimii täydellisesti kaikilla näyttökooilla. Responsiivisia katkaisupisteitä ei tarvita."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Minimal text-only list:"
+msgstr "Minimaalinen tekstipainotteinen lista:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Ultra-compact display showing only addresses. Perfect for simple navigation or teaser sections."
+msgstr "Erittäin kompakti näyttö, joka näyttää vain osoitteet. Täydellinen yksinkertaiselle navigoinnille tai teaser-osiille."
+
+#: includes/class-property-spotlight-admin.php
+msgid "If you prefer a visual interface, use the Gutenberg block instead of the shortcode. Perfect for users who aren't comfortable with code."
+msgstr "Jos haluat visuaalisen käyttöliittymän, käytä Gutenberg-lohkoa lyhytkoodin sijaan. Täydellinen käyttäjille, jotka eivät ole mukavia koodin kanssa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "In the Block Editor, click the + button to add a new block"
+msgstr "Lohkoeditorissa klikkaa +-painiketta lisätäksesi uuden lohkon"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Search for \"Property Spotlight\" in the block inserter"
+msgstr "Etsi \"Näyteikkuna\" lohkovalitsimesta"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use the block settings panel to configure all options visually"
+msgstr "Käytä lohkon asetuspaneelia kaikkien asetusten visuaaliseen määrittelyyn"
+
+#: includes/class-property-spotlight-admin.php
+msgid "The block provides the same options as the shortcode, but with a user-friendly interface. All settings are saved automatically."
+msgstr "Lohko tarjoaa samat asetukset kuin lyhytkoodi, mutta käyttäjäystävällisellä käyttöliittymällä. Kaikki asetukset tallennetaan automaattisesti."
+
+#: includes/class-property-spotlight-admin.php
+msgid "For theme developers: embed listings directly in PHP templates using WordPress's do_shortcode function. This is the recommended method for custom theme development."
+msgstr "Teemakehittäjille: upota kohteet suoraan PHP-malleihin WordPressin do_shortcode-funktiolla. Tämä on suositeltu menetelmä mukautetulle teemakehitykselle."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Place this code in your theme's template files (e.g., front-page.php, page.php) where you want listings to appear."
+msgstr "Aseta tämä koodi teemasi mallitiedostoihin (esim. front-page.php, page.php) sinne, missä haluat kohteiden näkyvän."
+
+#: includes/class-property-spotlight-admin.php
+msgid "The plugin uses a BEM (Block Element Modifier) naming convention for CSS classes, making it easy to target specific elements for custom styling. All classes are prefixed with"
+msgstr "Lisäosa käyttää BEM (Block Element Modifier) -nimeämiskäytäntöä CSS-luokille, mikä helpottaa tiettyjen elementtien kohdistamista mukautettuun muotoiluun. Kaikki luokat alkavat etuliitteellä"
+
+#: includes/class-property-spotlight-admin.php
+msgid "to avoid conflicts with your theme."
+msgstr "välttääksesi ristiriidat teemasi kanssa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Add custom CSS in Appearance > Customize > Additional CSS, or in your theme's stylesheet. Here are the available classes:"
+msgstr "Lisää mukautettua CSS:ää Ulkoasu > Muokkaa > Lisä-CSS tai teemasi tyylitiedostoon. Tässä ovat saatavilla olevat luokat:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Main wrapper container. Use this to style the overall listing section (margins, padding, background)."
+msgstr "Pääsäiliö. Käytä tätä koko kohteiden osion muotoiluun (marginit, täytöt, tausta)."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Applied when layout=\"grid\". Use to customize grid-specific styling (gap, alignment)."
+msgstr "Käytetään, kun layout=\"grid\". Käytä ruudukko-kohtaisen muotoilun mukauttamiseen (väli, tasaus)."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Applied when layout=\"list\". Use to customize vertical list spacing and layout."
+msgstr "Käytetään, kun layout=\"list\". Käytä pystylistan välistyksen ja asettelun mukauttamiseen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Applied when layout=\"carousel\". Use to customize slider navigation, arrows, and transitions."
+msgstr "Käytetään, kun layout=\"carousel\". Käytä liukusäätimen navigoinnin, nuolien ja siirtymien mukauttamiseen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Individual listing card container. Perfect for customizing card appearance (borders, shadows, hover effects)."
+msgstr "Yksittäinen kohteen korttisäiliö. Täydellinen kortin ulkoasun mukauttamiseen (reunat, varjot, hover-efektit)."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Image wrapper element. Use to customize image sizing, aspect ratio, or add overlay effects."
+msgstr "Kuvasäiliöelementti. Käytä kuvan koon, kuvasuhteen mukauttamiseen tai päällyksen efektien lisäämiseen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Content area containing text information. Use for typography, spacing, or background customization."
+msgstr "Sisältöalue, joka sisältää tekstitiedot. Käytä typografian, välistyksen tai taustan mukauttamiseen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listing address/title element. Customize font size, weight, color, or add hover effects."
+msgstr "Kohteen osoite/otsikkoelementti. Mukauta fonttikokoa, -painoa, -väriä tai lisää hover-efektejä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Price display element. Perfect for highlighting prices with custom colors or typography."
+msgstr "Hintanäyttöelementti. Täydellinen hintojen korostamiseen mukautetuilla väreillä tai typografialla."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Meta information container (rooms, area, property type). Use for styling secondary information."
+msgstr "Metatietosäiliö (huoneet, pinta-ala, kiinteistötyyppi). Käytä toissijaisen tiedon muotoiluun."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Example CSS Customization"
+msgstr "Esimerkki CSS-mukautuksesta"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Here's an example of customizing the listing cards:"
+msgstr "Tässä esimerkki kohteen korttien mukauttamisesta:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Tips & Best Practices"
+msgstr "Vinkit ja parhaat käytännöt"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Performance"
+msgstr "Suorituskyky"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use the limit attribute to avoid loading too many listings at once. 3-6 listings is optimal for most pages."
+msgstr "Käytä limit-attribuuttia välttääksesi liian monen kohteen lataamisen kerralla. 3-6 kohdetta on optimaalinen useimmille sivuille."
+
+#: includes/class-property-spotlight-admin.php
+msgid "The plugin caches API responses automatically. Clear cache in Settings if listings don't update immediately."
+msgstr "Lisäosa välimuistittaa API-vastaukset automaattisesti. Tyhjennä välimuisti Asetukset-välilehdeltä, jos kohteet eivät päivity heti."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Images are loaded lazily by default for better page load performance."
+msgstr "Kuvat ladataan laiskasti oletusarvoisesti paremman sivun lataussuorituskyvyn vuoksi."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Design Recommendations"
+msgstr "Suunnittelusuositukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use 3 columns for desktop, 2 for tablets, and 1 for mobile. The plugin handles responsive breakpoints automatically."
+msgstr "Käytä 3 saraketta työpöytäkäytössä, 2 tableteissa ja 1 mobiilissa. Lisäosa käsittelee responsiiviset katkaisupisteet automaattisesti."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Match your site's color scheme using the Style tab settings. Colors are applied via CSS variables."
+msgstr "Sovita sivustosi värimaailma käyttämällä Tyyli-välilehden asetuksia. Värit sovelletaan CSS-muuttujien kautta."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Combine the title attribute with style=\"featured\" for eye-catching section headers like \"NÄYTEIKKUNA\"."
+msgstr "Yhdistä title-attribuutti style=\"featured\"-tyylin kanssa silmiinpistävien osion otsikoiden luomiseen kuten \"NÄYTEIKKUNA\"."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Common Use Cases"
+msgstr "Yleiset käyttötapaukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Homepage:"
+msgstr "Etusivu:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use limit=\"3\" with grid layout for a hero section showcasing your best properties."
+msgstr "Käytä limit=\"3\" ruudukkoasettelun kanssa pääosioon, joka esittelee parhaat kohteesi."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Sidebar:"
+msgstr "Sivupalkki:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use layout=\"list\" with show_image=\"false\" for a compact, text-only widget."
+msgstr "Käytä layout=\"list\" show_image=\"false\"-asetuksella kompaktin, tekstipainotteisen vimpaimen luomiseen."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Property Pages:"
+msgstr "Kiinteistösivut:"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Use limit=\"4\" with columns=\"2\" to show related or similar properties."
+msgstr "Käytä limit=\"4\" columns=\"2\"-asetuksia näyttääksesi liittyviä tai vastaavia kiinteistöjä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Troubleshooting"
+msgstr "Vianetsintä"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Listings not showing? Check that API credentials are configured in the Settings tab."
+msgstr "Kohteet eivät näy? Tarkista, että API-tunnukset on määritetty Asetukset-välilehdellä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Images missing? Verify that listings have images in the Linear.fi system."
+msgstr "Kuvat puuttuvat? Varmista, että kohteilla on kuvia Linear.fi-järjestelmässä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Styling issues? Use browser developer tools to inspect CSS classes and override as needed."
+msgstr "Muotoiluongelmia? Käytä selaimen kehittäjätyökaluja tarkistaaksesi CSS-luokat ja ohittaaksesi tarvittaessa."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Shortcode not working? Ensure you're using square brackets [ ] not parentheses ( )."
+msgstr "Lyhytkoodi ei toimi? Varmista, että käytät hakasulkeita [ ] eikä sulkeita ( )."
+
+#: includes/class-property-spotlight-admin.php
+msgid "You do not have permission to access this page."
+msgstr "Sinulla ei ole oikeutta käyttää tätä sivua."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Access Control"
+msgstr "Käyttöoikeudet"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Control which users can manage featured listings. Administrators always have full access. Settings, Style, and API configuration remain admin-only."
+msgstr "Hallitse, ketkä käyttäjät voivat hallita nostettuja kohteita. Ylläpitäjillä on aina täysi pääsy. Asetukset, Tyyli ja API-määritykset pysyvät vain ylläpitäjien käytettävissä."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Allowed Roles"
+msgstr "Sallitut roolit"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Users with these roles can manage featured listings."
+msgstr "Käyttäjät näillä rooleilla voivat hallita nostettuja kohteita."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Allowed Users"
+msgstr "Sallitut käyttäjät"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Individual users who can manage featured listings (regardless of role)."
+msgstr "Yksittäiset käyttäjät, jotka voivat hallita nostettuja kohteita (roolista riippumatta)."
+
+#: includes/class-property-spotlight-admin.php
+msgid "Save Access Settings"
+msgstr "Tallenna käyttöoikeusasetukset"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Access settings saved"
+msgstr "Käyttöoikeusasetukset tallennettu"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Single Listing Pages"
+msgstr "Yksittäiset kohdesivut"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Hide on single listing pages"
+msgstr "Piilota yksittäisen kohteen sivulla"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Automatically hide the spotlight when viewing an individual property listing. Use this when the shortcode is on a page that also displays single listings."
+msgstr "Piilota näyteikkuna automaattisesti yksittäisen kohteen sivulla. Käytä tätä, kun lyhytkoodi on sivulla, joka näyttää myös yksittäiset kohteet."
+
+#: blocks/spotlight/index.js
+msgid "Hide on single listing"
+msgstr "Piilota yksittäisellä kohteella"
+
+#: blocks/spotlight/index.js
+msgid "Hide spotlight when viewing individual listings"
+msgstr "Piilota näyteikkuna yksittäisen kohteen sivulla"
+
+#: blocks/spotlight/index.js
+msgid "Use global setting"
+msgstr "Käytä yleistä asetusta"
+
+#: blocks/spotlight/index.js
+msgid "Always hide"
+msgstr "Piilota aina"
+
+#: blocks/spotlight/index.js
+msgid "Never hide"
+msgstr "Älä piilota"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Hide spotlight on single listing pages. Useful when the shortcode is on a page that also displays individual listings."
+msgstr "Piilota näyteikkuna yksittäisen kohteen sivulla. Hyödyllinen, kun lyhytkoodi on sivulla, joka näyttää myös yksittäiset kohteet."
