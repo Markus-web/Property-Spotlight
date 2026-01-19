@@ -353,6 +353,12 @@ ls -la property-spotlight/
 
 ## Changelog
 
+### 1.2.2
+- Added `CONTRIBUTING.md` for contribution guidelines
+- Added `SECURITY.md` for vulnerability disclosure policy
+- Added GitHub Actions workflows for automated CI/CD
+- Releases now include downloadable ZIP via GitHub Releases
+
 ### 1.2.1
 - **Conditional Display**: New `hide_on_single` attribute to hide spotlight on single listing pages
 - **Global Setting**: "Hide on single listing pages" option in Automation Settings

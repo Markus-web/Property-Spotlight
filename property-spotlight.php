@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: Property Spotlight
  * Plugin URI: https://markusmedia.fi
  * Description: Feature specific property listings on your website with manual selection controls. Works with Linear.fi API.
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: Markus Media
  * Author URI: https://markusmedia.fi
  * License: GPL-2.0+
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Requires PHP: 8.2
  */
 
-define('PROPERTY_SPOTLIGHT_VERSION', '1.2.1');
+define('PROPERTY_SPOTLIGHT_VERSION', '1.2.2');
 define('PROPERTY_SPOTLIGHT_PLUGIN_PATH', rtrim(plugin_dir_path(__FILE__), '/'));
 define('PROPERTY_SPOTLIGHT_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('PROPERTY_SPOTLIGHT_PLUGIN_BASENAME', plugin_basename(__FILE__));

@@ -3,7 +3,7 @@ Contributors: markusmedia
 Tags: real estate, property, listings, linear, spotlight
 Requires at least: 6.4
 Tested up to: 6.9
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -98,6 +98,12 @@ Use `hide_on_single="auto"` (default) to automatically hide on pages matching th
 
 == Changelog ==
 
+= 1.2.2 =
+* Added CONTRIBUTING.md for contribution guidelines
+* Added SECURITY.md for vulnerability disclosure policy
+* Added GitHub Actions workflows for CI/CD
+* Automated release builds with downloadable ZIP
+
 = 1.2.1 =
 * Conditional Display: New `hide_on_single` attribute to hide spotlight on single listing pages
 * Global Setting: "Hide on single listing pages" option in Automation Settings
@@ -156,6 +162,9 @@ Use `hide_on_single="auto"` (default) to automatically hide on pages matching th
 * Finnish translations
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+Added contribution guidelines, security policy, and automated CI/CD releases.
 
 = 1.2.1 =
 New hide_on_single feature for single listing pages. CSS fix for featured style.
