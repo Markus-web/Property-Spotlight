@@ -5,13 +5,39 @@
 .idea/
 .vscode/
 *.sublime-*
+*.swp
+*.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
+Desktop.ini
+._*
 
 # WordPress
 wp-content/
 
 # Local development
 docker-compose.override.yml
+.env
+.env.local
+*.log
+debug.log
+
+# Dependency directories (if using npm/composer in future)
+node_modules/
+/vendor/
+
+# Test artifacts
+.phpunit.result.cache
+phpunit.xml
+coverage/
+
+# Editor backups
+*.bak
+*.backup
+
+# Cursor IDE
+.cursorignore
+.cursor/
