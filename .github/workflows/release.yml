@@ -1,0 +1,48 @@
+name: Build Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Build plugin ZIP
+        run: |
+          mkdir -p build/property-spotlight
+          
+          # Copy plugin files
+          cp -r assets build/property-spotlight/
+          cp -r blocks build/property-spotlight/
+          cp -r includes build/property-spotlight/
+          cp -r languages build/property-spotlight/
+          cp index.php build/property-spotlight/
+          cp property-spotlight.php build/property-spotlight/
+          cp uninstall.php build/property-spotlight/
+          cp LICENSE build/property-spotlight/
+          cp readme.txt build/property-spotlight/
+          
+          # Remove development files
+          find build/property-spotlight -name "compile-mo.php" -delete
+          
+          # Create ZIP
+          cd build
+          zip -r ../property-spotlight-${{ steps.version.outputs.VERSION }}.zip property-spotlight
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: property-spotlight-${{ steps.version.outputs.VERSION }}.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
