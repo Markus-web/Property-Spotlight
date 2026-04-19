@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Plugin Name: Property Spotlight
- * Plugin URI: https://markusmedia.fi
+ * Plugin URI: https://github.com/Markus-web/Property-Spotlight
  * Description: Feature specific property listings on your website with manual selection controls. Works with Linear.fi API.
  * Version: 1.0.0
  * Author: Markus Media
