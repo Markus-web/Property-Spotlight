@@ -1,0 +1,473 @@
+/**
+ * Property Spotlight Frontend Styles
+ * Inspired by Oikotie.fi and Nettiauto.com designs
+ */
+
+:root {
+    /* Customizable via admin settings */
+    --property-spotlight-primary: #1a1a1a;
+    --property-spotlight-accent: #0066cc;
+    --property-spotlight-price: #1a1a1a;
+    --property-spotlight-text: #1a1a1a;
+    --property-spotlight-text-muted: #666;
+    --property-spotlight-bg: #fff;
+    --property-spotlight-border: #e5e5e5;
+    --property-spotlight-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    --property-spotlight-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --property-spotlight-radius: 12px;
+    --property-spotlight-gap: 16px;
+    
+    /* Featured/Esittelyssä style */
+    --property-spotlight-featured-bg: #c62828;
+    --property-spotlight-featured-gradient: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%);
+}
+
+/* Base container */
+.property-spotlight {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.property-spotlight *,
+.property-spotlight *::before,
+.property-spotlight *::after {
+    box-sizing: border-box;
+}
+
+/* Section Header */
+.property-spotlight__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.property-spotlight__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--property-spotlight-primary);
+}
+
+.property-spotlight__title-icon {
+    width: 24px;
+    height: 24px;
+    fill: #f5a623;
+}
+
+/* Grid Layout */
+.property-spotlight--grid {
+    display: grid;
+    gap: var(--property-spotlight-gap);
+}
+
+.property-spotlight--cols-1 { grid-template-columns: 1fr; }
+.property-spotlight--cols-2 { grid-template-columns: repeat(2, 1fr); }
+.property-spotlight--cols-3 { grid-template-columns: repeat(3, 1fr); }
+.property-spotlight--cols-4 { grid-template-columns: repeat(4, 1fr); }
+.property-spotlight--cols-5 { grid-template-columns: repeat(5, 1fr); }
+.property-spotlight--cols-6 { grid-template-columns: repeat(6, 1fr); }
+
+/* List Layout */
+.property-spotlight--list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--property-spotlight-gap);
+}
+
+.property-spotlight--list .property-spotlight__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.property-spotlight--list .property-spotlight__link {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.property-spotlight--list .property-spotlight__image-wrapper {
+    flex: 0 0 280px;
+}
+
+.property-spotlight--list .property-spotlight__image {
+    height: 180px;
+    border-radius: var(--property-spotlight-radius) 0 0 var(--property-spotlight-radius);
+}
+
+.property-spotlight--list .property-spotlight__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 24px;
+}
+
+/* Carousel Layout */
+.property-spotlight--carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.property-spotlight__track {
+    display: flex;
+    gap: var(--property-spotlight-gap);
+    transition: transform 0.4s ease;
+}
+
+.property-spotlight--carousel .property-spotlight__item {
+    flex: 0 0 calc(33.333% - 11px);
+    min-width: 280px;
+}
+
+.property-spotlight__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: var(--property-spotlight-bg);
+    box-shadow: var(--property-spotlight-shadow-hover);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--property-spotlight-primary);
+    transition: all 0.2s;
+}
+
+.property-spotlight__nav:hover {
+    background: var(--property-spotlight-accent);
+    color: #fff;
+}
+
+.property-spotlight__nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.property-spotlight__nav--prev { left: 8px; }
+.property-spotlight__nav--next { right: 8px; }
+
+/* ===========================================
+   OIKOTIE-STYLE CARD (Default)
+   =========================================== */
+.property-spotlight__item {
+    position: relative;
+    background: var(--property-spotlight-bg);
+    border-radius: var(--property-spotlight-radius);
+    overflow: hidden;
+    box-shadow: var(--property-spotlight-shadow);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.property-spotlight__item:hover {
+    box-shadow: var(--property-spotlight-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.property-spotlight__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Image wrapper */
+.property-spotlight__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.property-spotlight__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.property-spotlight__item:hover .property-spotlight__image {
+    transform: scale(1.03);
+}
+
+.property-spotlight__image--placeholder {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+/* Content */
+.property-spotlight__content {
+    padding: 16px;
+}
+
+/* Address (Oikotie: full address with city) */
+.property-spotlight__address {
+    margin: 0 0 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--property-spotlight-primary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Data rows (Oikotie style) */
+.property-spotlight__row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.property-spotlight__row:last-child {
+    margin-bottom: 0;
+}
+
+.property-spotlight__sep {
+    color: var(--property-spotlight-text-muted);
+    font-size: 0.75rem;
+    margin: 0 4px;
+}
+
+/* Price (Oikotie: prominent but black) */
+.property-spotlight__price {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--property-spotlight-price);
+}
+
+/* Area */
+.property-spotlight__area {
+    font-size: 0.9375rem;
+    color: var(--property-spotlight-text);
+}
+
+/* Meta row */
+.property-spotlight__row--meta {
+    font-size: 0.8125rem;
+    color: var(--property-spotlight-text-muted);
+}
+
+.property-spotlight__rooms,
+.property-spotlight__type {
+    color: var(--property-spotlight-text-muted);
+}
+
+/* ===========================================
+   FEATURED STYLE (NÄYTEIKKUNA - Nettiauto)
+   =========================================== */
+.property-spotlight--featured .property-spotlight__item,
+.property-spotlight__item--featured {
+    background: var(--property-spotlight-featured-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.property-spotlight--featured .property-spotlight__image-wrapper,
+.property-spotlight__item--featured .property-spotlight__image-wrapper {
+    position: relative;
+    background: #1a1a1a; /* Dark neutral background behind images */
+}
+
+.property-spotlight--featured .property-spotlight__image-wrapper::after,
+.property-spotlight__item--featured .property-spotlight__image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: var(--property-spotlight-featured-gradient);
+    pointer-events: none;
+}
+
+.property-spotlight--featured .property-spotlight__image--placeholder,
+.property-spotlight__item--featured .property-spotlight__image--placeholder {
+    background: linear-gradient(135deg, 
+        color-mix(in srgb, var(--property-spotlight-featured-bg) 80%, black) 0%, 
+        var(--property-spotlight-featured-bg) 100%);
+}
+
+.property-spotlight--featured .property-spotlight__content,
+.property-spotlight__item--featured .property-spotlight__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: transparent;
+}
+
+.property-spotlight--featured .property-spotlight__address,
+.property-spotlight__item--featured .property-spotlight__address {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.property-spotlight--featured .property-spotlight__row,
+.property-spotlight__item--featured .property-spotlight__row {
+    color: rgba(255,255,255,0.9);
+}
+
+.property-spotlight--featured .property-spotlight__price,
+.property-spotlight__item--featured .property-spotlight__price {
+    color: #fff;
+}
+
+.property-spotlight--featured .property-spotlight__area,
+.property-spotlight--featured .property-spotlight__sep,
+.property-spotlight__item--featured .property-spotlight__area,
+.property-spotlight__item--featured .property-spotlight__sep {
+    color: rgba(255,255,255,0.85);
+}
+
+.property-spotlight--featured .property-spotlight__row--meta,
+.property-spotlight__item--featured .property-spotlight__row--meta {
+    display: none;
+}
+
+/* ===========================================
+   COMPACT STYLE
+   =========================================== */
+.property-spotlight--compact .property-spotlight__item {
+    border-radius: calc(var(--property-spotlight-radius) / 3);
+}
+
+.property-spotlight--compact .property-spotlight__image {
+    height: 150px;
+}
+
+.property-spotlight--compact .property-spotlight__content {
+    padding: 12px;
+}
+
+.property-spotlight--compact .property-spotlight__address {
+    font-size: 0.875rem;
+    margin-bottom: 6px;
+    -webkit-line-clamp: 1;
+}
+
+.property-spotlight--compact .property-spotlight__price {
+    font-size: 0.9375rem;
+}
+
+.property-spotlight--compact .property-spotlight__area {
+    font-size: 0.8125rem;
+}
+
+.property-spotlight--compact .property-spotlight__row--meta {
+    font-size: 0.75rem;
+}
+
+/* ===========================================
+   DARK STYLE
+   =========================================== */
+.property-spotlight--dark {
+    --property-spotlight-bg: #1a1a1a;
+    --property-spotlight-primary: #fff;
+    --property-spotlight-text: #e0e0e0;
+    --property-spotlight-text-muted: #999;
+    --property-spotlight-price: #fff;
+    --property-spotlight-border: #333;
+}
+
+.property-spotlight--dark .property-spotlight__item {
+    border: 1px solid #333;
+}
+
+/* ===========================================
+   RESPONSIVE
+   =========================================== */
+@media (max-width: 1200px) {
+    .property-spotlight--cols-6 { grid-template-columns: repeat(4, 1fr); }
+    .property-spotlight--cols-5 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 992px) {
+    .property-spotlight--cols-6,
+    .property-spotlight--cols-5,
+    .property-spotlight--cols-4 { grid-template-columns: repeat(3, 1fr); }
+    
+    .property-spotlight--carousel .property-spotlight__item {
+        flex: 0 0 calc(50% - 8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .property-spotlight--cols-6,
+    .property-spotlight--cols-5,
+    .property-spotlight--cols-4,
+    .property-spotlight--cols-3 { grid-template-columns: repeat(2, 1fr); }
+    
+    .property-spotlight--list .property-spotlight__link {
+        flex-direction: column;
+    }
+    
+    .property-spotlight--list .property-spotlight__image-wrapper {
+        flex: none;
+    }
+    
+    .property-spotlight--list .property-spotlight__image {
+        height: 180px;
+        border-radius: var(--property-spotlight-radius) var(--property-spotlight-radius) 0 0;
+    }
+    
+    .property-spotlight--carousel .property-spotlight__item {
+        flex: 0 0 calc(100% - 40px);
+    }
+    
+    .property-spotlight__nav {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .property-spotlight--cols-6,
+    .property-spotlight--cols-5,
+    .property-spotlight--cols-4,
+    .property-spotlight--cols-3,
+    .property-spotlight--cols-2 { grid-template-columns: 1fr; }
+    
+    .property-spotlight__image {
+        height: 200px;
+    }
+    
+    .property-spotlight__content {
+        padding: 14px;
+    }
+    
+    .property-spotlight__address {
+        font-size: 0.875rem;
+    }
+    
+    .property-spotlight__price {
+        font-size: 1rem;
+    }
+    
+    .property-spotlight--featured .property-spotlight__content,
+    .property-spotlight__item--featured .property-spotlight__content {
+        padding: 16px;
+    }
+}
+
+/* Block editor preview */
+.wp-block-property-spotlight-spotlight .property-spotlight {
+    margin: 0;
+}
+
+.wp-block-property-spotlight-spotlight .property-spotlight__item:hover {
+    transform: none;
+}
