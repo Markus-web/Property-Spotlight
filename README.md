@@ -386,6 +386,12 @@ ls -la property-spotlight/
 - Finnish translations (330+ strings)
 - GitHub Actions CI/CD with automated release builds
 
+## AI Assistance
+
+This plugin was developed with assistance from large language models:
+
+- **Claude Sonnet 4.5 / 4.6** (Anthropic) — architecture, PHP implementation, WordPress API patterns, security review
+
 ## License
 
 GPL-2.0+
