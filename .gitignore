@@ -40,4 +40,4 @@ coverage/
 
 # Cursor IDE
 .cursorignore
-.cursor/
+.cursor/.worktrees/
