@@ -86,7 +86,7 @@ Customize the appearance with:
 | `limit` | Max listings to display | Any number | All |
 | `layout` | Display layout | `grid`, `list`, `carousel` | `grid` |
 | `style` | Card design style | `default`, `featured`, `compact`, `dark` | `default` |
-| `columns` | Grid columns | `1`, `2`, `3`, `4` | `3` |
+| `columns` | Grid columns | `1`–`6` | `3` |
 | `title` | Section header | Any text | — |
 | `class` | Custom CSS class | Any class name | — |
 | `show_price` | Show price | `true`, `false` | `true` |
@@ -94,6 +94,7 @@ Customize the appearance with:
 | `show_image` | Show image | `true`, `false` | `true` |
 | `show_location` | Show city | `true`, `false` | `true` |
 | `show_details` | Show type/rooms/area | `true`, `false` | `true` |
+| `show_area` | Show area (m²) | `true`, `false` | `true` |
 | `lang` | Content language | `fi`, `en`, `sv` | Auto |
 | `hide_on_single` | Hide on single listing pages | `auto`, `true`, `false` | `auto` |
 
@@ -212,7 +213,11 @@ Note: The test API credentials above require external network access. Docker con
 
 ### Build Production ZIP
 
-```powershell
+```bash
+# Linux/macOS
+./build-zip.sh
+
+# Windows PowerShell
 .\build-zip.ps1
 ```
 
@@ -290,7 +295,7 @@ property-spotlight/
 |----------|--------|------|-------------|
 | `/property-spotlight/v1/listings` | GET | edit_posts | All listings |
 | `/property-spotlight/v1/featured` | GET | Public | Featured listings |
-| `/property-spotlight/v1/settings` | GET/POST | manage_options | Plugin settings |
+| `/property-spotlight/v1/settings` | GET/POST | manage_options | Plugin settings (GET excludes credentials) |
 
 ## Troubleshooting
 

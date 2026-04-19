@@ -107,6 +107,7 @@ class Property_Spotlight {
             ],
         ]);
         
+        // Public by design: same data is rendered publicly by the [property_spotlight] shortcode.
         register_rest_route('property-spotlight/v1', '/featured', [
             'methods' => 'GET',
             'callback' => [$this, 'rest_get_featured_listings'],
@@ -181,7 +182,9 @@ class Property_Spotlight {
      * REST callback: Get settings
      */
     public function rest_get_settings(): \WP_REST_Response {
-        return new \WP_REST_Response($this->options, 200);
+        $safe = $this->options;
+        unset($safe['api_key'], $safe['data_url'], $safe['client_secret']);
+        return new \WP_REST_Response($safe, 200);
     }
     
     /**
