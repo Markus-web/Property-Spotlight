@@ -4,8 +4,8 @@ Feature specific property listings on your WordPress website with manual selecti
 
 ## Requirements
 
-- WordPress 6.4+ (tested up to 6.9)
-- PHP 8.2+ (compatible with PHP 8.4+)
+- WordPress 6.4+ (tested up to 7.0)
+- PHP 8.2+ (tested up to PHP 8.5)
 - Linear.fi API credentials (standalone) or Official Linear plugin installed
 
 ## Installation

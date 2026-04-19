@@ -120,7 +120,7 @@ function property_spotlight_activate() {
         if (!isset($options['api_key'])) {
             $options['api_key'] = '';
         }
-        // Add new v1.1.0 settings
+        // Add automation settings if missing
         if (!isset($options['auto_expire_days'])) {
             $options['auto_expire_days'] = 0;
         }
