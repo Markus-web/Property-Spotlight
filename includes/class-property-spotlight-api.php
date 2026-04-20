@@ -374,17 +374,15 @@ class Property_Spotlight_API {
                 return '';
             }
 
-            if ($url) {
-                // Handle TranslatePress language URLs
-                if (class_exists('TRP_Translate_Press')) {
-                    $trp = \TRP_Translate_Press::get_trp_instance();
-                    $url_converter = $trp->get_component('url_converter');
-                    if (null !== $url_converter && method_exists($url_converter, 'get_url_for_language')) {
-                        $url = esc_url($url_converter->get_url_for_language($lang, $url, ''));
-                    }
+            // Handle TranslatePress language URLs
+            if (class_exists('TRP_Translate_Press')) {
+                $trp = \TRP_Translate_Press::get_trp_instance();
+                $url_converter = $trp->get_component('url_converter');
+                if (null !== $url_converter && method_exists($url_converter, 'get_url_for_language')) {
+                    $url = esc_url($url_converter->get_url_for_language($lang, $url, ''));
                 }
-                return rtrim($url, '/');
             }
+            return rtrim($url, '/');
         }
         
         return '';
