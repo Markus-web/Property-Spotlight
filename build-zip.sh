@@ -6,7 +6,7 @@ set -e
 
 # Configuration
 PLUGIN_NAME="property-spotlight"
-VERSION="1.0.0"
+VERSION=$(grep "^ \* Version:" property-spotlight.php | awk '{print $3}')
 OUTPUT_FILE="${PLUGIN_NAME}.zip"
 
 # Get script directory
