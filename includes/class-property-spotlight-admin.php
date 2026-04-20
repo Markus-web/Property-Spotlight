@@ -691,6 +691,9 @@ class Property_Spotlight_Admin {
                     $price_color = $style_settings['price_color'] ?? '#1a1a1a';
                     $featured_bg = $style_settings['featured_bg'] ?? '#c62828';
                     $border_radius = $style_settings['border_radius'] ?? '12';
+                    $image_fit = (isset($style_settings['image_fit']) && in_array($style_settings['image_fit'], ['cover', 'contain'], true))
+                        ? $style_settings['image_fit']
+                        : 'cover';
                     ?>
                     
                     <table class="form-table property-spotlight-style-table">
@@ -732,6 +735,18 @@ class Property_Spotlight_Admin {
                                 <input type="range" id="style-border-radius" min="0" max="24" value="<?php echo esc_attr($border_radius); ?>">
                                 <span id="style-border-radius-value"><?php echo esc_attr($border_radius); ?>px</span>
                                 <p class="description"><?php esc_html_e('Card corner roundness. Range: 0px (sharp) to 24px (very rounded). Lower values (0-6px) for professional, higher (16-24px) for softer look.', 'property-spotlight'); ?></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="style-image-fit"><?php esc_html_e('Image Fit', 'property-spotlight'); ?></label>
+                            </th>
+                            <td>
+                                <select id="style-image-fit">
+                                    <option value="cover" <?php selected($image_fit, 'cover'); ?>><?php esc_html_e('Cover (fill card, crop if needed)', 'property-spotlight'); ?></option>
+                                    <option value="contain" <?php selected($image_fit, 'contain'); ?>><?php esc_html_e('Contain (show full image)', 'property-spotlight'); ?></option>
+                                </select>
+                                <p class="description"><?php esc_html_e('Controls how listing photos are scaled inside cards. Cover gives a uniform professional grid; contain shows full images but may leave empty space.', 'property-spotlight'); ?></p>
                             </td>
                         </tr>
                     </table>
@@ -1236,6 +1251,9 @@ class Property_Spotlight_Admin {
             'price_color' => sanitize_hex_color(wp_unslash($_POST['price_color'] ?? '#1a1a1a')) ?: '#1a1a1a',
             'featured_bg' => sanitize_hex_color(wp_unslash($_POST['featured_bg'] ?? '#c62828')) ?: '#c62828',
             'border_radius' => absint($_POST['border_radius'] ?? 12),
+            'image_fit' => in_array(sanitize_text_field(wp_unslash($_POST['image_fit'] ?? 'cover')), ['cover', 'contain'], true)
+                ? sanitize_text_field(wp_unslash($_POST['image_fit']))
+                : 'cover',
         ];
         
         $settings = get_option('property_spotlight_settings', []);

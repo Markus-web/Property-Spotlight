@@ -220,6 +220,22 @@ msgid "Changes take effect immediately after saving."
 msgstr "Muutokset tulevat voimaan heti tallennuksen jälkeen."
 
 #: includes/class-property-spotlight-admin.php
+msgid "Image Fit"
+msgstr "Kuvan sovitus"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Cover (fill card, crop if needed)"
+msgstr "Peittävä (täyttää kortin, rajaa tarvittaessa)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Contain (show full image)"
+msgstr "Sovita (näytä koko kuva)"
+
+#: includes/class-property-spotlight-admin.php
+msgid "Controls how listing photos are scaled inside cards. Cover gives a uniform professional grid; contain shows full images but may leave empty space."
+msgstr "Määrittää, miten kohdekuvat skaalataan korteissa. Peittävä tuottaa yhtenäisen ammattilaismaisen ruudukon; Sovita näyttää koko kuvan, mutta voi jättää tyhjää tilaa."
+
+#: includes/class-property-spotlight-admin.php
 msgid "Style Settings"
 msgstr "Tyylin asetukset"
 

@@ -16,6 +16,7 @@
     --property-spotlight-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
     --property-spotlight-radius: 12px;
     --property-spotlight-gap: 16px;
+    --property-spotlight-image-fit: cover;
     
     /* Featured/Esittelyssä style */
     --property-spotlight-featured-bg: #c62828;
@@ -96,6 +97,7 @@
 
 .property-spotlight--list .property-spotlight__image {
     height: 180px;
+    min-height: 180px;
     border-radius: var(--property-spotlight-radius) 0 0 var(--property-spotlight-radius);
 }
 
@@ -183,19 +185,32 @@
 .property-spotlight__image-wrapper {
     position: relative;
     overflow: hidden;
-    background: #f0f0f0;
+    background: var(--property-spotlight-bg);
 }
 
 .property-spotlight__image {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    min-height: 200px;
+    max-width: none;
+    object-fit: var(--property-spotlight-image-fit);
+    object-position: center;
     display: block;
+    background: transparent;
     transition: transform 0.3s ease;
 }
 
 .property-spotlight__item:hover .property-spotlight__image {
     transform: scale(1.03);
+}
+
+.property-spotlight--image-fit-contain .property-spotlight__image {
+    object-fit: contain;
+    background: var(--property-spotlight-bg);
+}
+
+.property-spotlight--image-fit-contain .property-spotlight__item:hover .property-spotlight__image {
+    transform: none;
 }
 
 .property-spotlight__image--placeholder {
@@ -347,6 +362,7 @@
 
 .property-spotlight--compact .property-spotlight__image {
     height: 150px;
+    min-height: 150px;
 }
 
 .property-spotlight--compact .property-spotlight__content {
@@ -421,6 +437,7 @@
     
     .property-spotlight--list .property-spotlight__image {
         height: 180px;
+        min-height: 180px;
         border-radius: var(--property-spotlight-radius) var(--property-spotlight-radius) 0 0;
     }
     
@@ -443,6 +460,7 @@
     
     .property-spotlight__image {
         height: 200px;
+        min-height: 200px;
     }
     
     .property-spotlight__content {

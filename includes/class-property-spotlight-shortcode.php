@@ -147,6 +147,9 @@ class Property_Spotlight_Shortcode {
         if (isset($style['border_radius'])) {
             $vars[] = '--property-spotlight-radius: ' . absint($style['border_radius']) . 'px';
         }
+        if (!empty($style['image_fit']) && in_array($style['image_fit'], ['cover', 'contain'], true)) {
+            $vars[] = '--property-spotlight-image-fit: ' . esc_attr($style['image_fit']);
+        }
         
         return !empty($vars) ? implode('; ', $vars) : '';
     }
@@ -164,10 +167,16 @@ class Property_Spotlight_Shortcode {
         $columns = $atts['columns'];
         $custom_class = sanitize_html_class($atts['class']);
         $title = $atts['title'];
+        $settings = get_option('property_spotlight_settings', []);
+        $style_settings = $settings['style'] ?? [];
+        $image_fit = (isset($style_settings['image_fit']) && in_array($style_settings['image_fit'], ['cover', 'contain'], true))
+            ? $style_settings['image_fit']
+            : 'cover';
         
         $classes = [
             'property-spotlight',
             'property-spotlight--' . $layout,
+            'property-spotlight--image-fit-' . $image_fit,
         ];
         
         // Add style modifier

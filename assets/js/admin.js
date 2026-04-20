@@ -492,35 +492,40 @@
                 accent_color: '#c54b4b',
                 price_color: '#012f75',
                 featured_bg: '#012f75',
-                border_radius: 4
+                border_radius: 4,
+                image_fit: 'cover'
             },
             'oikotie': {
                 primary_color: '#1a1a1a',
                 accent_color: '#0066cc',
                 price_color: '#1a1a1a',
                 featured_bg: '#0066cc',
-                border_radius: 12
+                border_radius: 12,
+                image_fit: 'cover'
             },
             'nettiauto': {
                 primary_color: '#1a1a1a',
                 accent_color: '#e65100',
                 price_color: '#e65100',
                 featured_bg: '#c62828',
-                border_radius: 4
+                border_radius: 4,
+                image_fit: 'cover'
             },
             'minimal': {
                 primary_color: '#333333',
                 accent_color: '#666666',
                 price_color: '#333333',
                 featured_bg: '#333333',
-                border_radius: 0
+                border_radius: 0,
+                image_fit: 'cover'
             },
             'default': {
                 primary_color: '#1a1a1a',
                 accent_color: '#0066cc',
                 price_color: '#1a1a1a',
                 featured_bg: '#c62828',
-                border_radius: 12
+                border_radius: 12,
+                image_fit: 'cover'
             }
         };
         
@@ -536,6 +541,7 @@
         $('#style-featured-bg-text').val(values.featured_bg);
         $('#style-border-radius').val(values.border_radius);
         $('#style-border-radius-value').text(values.border_radius + 'px');
+        $('#style-image-fit').val(values.image_fit || 'cover');
     }
     
     /**
@@ -558,7 +564,8 @@
                 accent_color: $('#style-accent-color').val(),
                 price_color: $('#style-price-color').val(),
                 featured_bg: $('#style-featured-bg').val(),
-                border_radius: $('#style-border-radius').val()
+                border_radius: $('#style-border-radius').val(),
+                image_fit: $('#style-image-fit').val()
             },
             success: function(response) {
                 if (response.success) {
