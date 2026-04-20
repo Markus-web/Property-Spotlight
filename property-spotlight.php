@@ -52,6 +52,10 @@ function property_spotlight_check_api_configured() {
  * Display admin notice if API is not configured
  */
 function property_spotlight_admin_notice() {
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+
     // Only show on non-plugin pages
     $screen = get_current_screen();
     if ($screen && $screen->id === 'toplevel_page_property-spotlight') {

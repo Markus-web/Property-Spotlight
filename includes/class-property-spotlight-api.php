@@ -118,6 +118,7 @@ class Property_Spotlight_API {
         
         if (is_wp_error($response)) {
             $message = $response->get_error_message();
+            error_log('[Property Spotlight] API request failed: ' . $message);
             if (preg_match('/timed out|timeout/i', $message)) {
                 return new \WP_Error(
                     'api_timeout',
@@ -373,7 +374,9 @@ class Property_Spotlight_API {
                 if (class_exists('TRP_Translate_Press')) {
                     $trp = \TRP_Translate_Press::get_trp_instance();
                     $url_converter = $trp->get_component('url_converter');
-                    $url = esc_url($url_converter->get_url_for_language($lang, $url, ''));
+                    if (null !== $url_converter && method_exists($url_converter, 'get_url_for_language')) {
+                        $url = esc_url($url_converter->get_url_for_language($lang, $url, ''));
+                    }
                 }
                 return rtrim($url, '/');
             }

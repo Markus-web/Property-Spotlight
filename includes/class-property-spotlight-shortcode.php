@@ -336,6 +336,12 @@ class Property_Spotlight_Shortcode {
      * @return string
      */
     private function get_carousel_script(): string {
+        static $printed = false;
+        if ($printed) {
+            return '';
+        }
+        $printed = true;
+
         return '
         <script>
         (function() {

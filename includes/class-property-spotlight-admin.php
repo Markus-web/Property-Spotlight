@@ -612,7 +612,12 @@ class Property_Spotlight_Admin {
                     }
                     
                     // Get all users for the user selector (exclude current admin)
-                    $all_users = get_users(['fields' => ['ID', 'display_name', 'user_email']]);
+                    $cache_key = 'property_spotlight_all_users';
+                    $all_users = wp_cache_get($cache_key);
+                    if (false === $all_users) {
+                        $all_users = get_users(['fields' => ['ID', 'display_name', 'user_email']]);
+                        wp_cache_set($cache_key, $all_users, '', 60);
+                    }
                     ?>
                     
                     <table class="form-table">
@@ -1139,6 +1144,7 @@ class Property_Spotlight_Admin {
         if (is_string($raw_ids)) {
             $featured_ids = json_decode($raw_ids, true);
             if (json_last_error() !== JSON_ERROR_NONE) {
+                error_log('[Property Spotlight] Failed to decode featured_ids JSON: ' . json_last_error_msg());
                 $featured_ids = [];
             }
         } else {
