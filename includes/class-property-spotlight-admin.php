@@ -1146,7 +1146,9 @@ class Property_Spotlight_Admin {
         if (is_string($raw_ids)) {
             $featured_ids = json_decode($raw_ids, true);
             if (json_last_error() !== JSON_ERROR_NONE) {
-                error_log('[Property Spotlight] Failed to decode featured_ids JSON: ' . json_last_error_msg());
+                if (defined('WP_DEBUG_LOG') && WP_DEBUG_LOG) {
+                    error_log('[Property Spotlight] Failed to decode featured_ids JSON: ' . json_last_error_msg()); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+                }
                 $featured_ids = [];
             }
         } else {

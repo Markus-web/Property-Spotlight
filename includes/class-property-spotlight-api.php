@@ -118,7 +118,9 @@ class Property_Spotlight_API {
         
         if (is_wp_error($response)) {
             $message = $response->get_error_message();
-            error_log('[Property Spotlight] API request failed: ' . $message);
+            if (defined('WP_DEBUG_LOG') && WP_DEBUG_LOG) {
+                error_log('[Property Spotlight] API request failed: ' . $message); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+            }
             if (preg_match('/timed out|timeout/i', $message)) {
                 return new \WP_Error(
                     'api_timeout',
@@ -370,7 +372,9 @@ class Property_Spotlight_API {
             $url = get_permalink($page_id);
 
             if (false === $url) {
-                error_log('[Property Spotlight] get_permalink() returned false for page ID: ' . $page_id);
+                if (defined('WP_DEBUG_LOG') && WP_DEBUG_LOG) {
+                    error_log('[Property Spotlight] get_permalink() returned false for page ID: ' . $page_id); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+                }
                 return '';
             }
 
