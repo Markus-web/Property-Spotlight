@@ -605,9 +605,11 @@ class Property_Spotlight_Admin {
                     // Get available roles (exclude administrator)
                     $wp_roles = wp_roles();
                     $available_roles = [];
-                    foreach ($wp_roles->roles as $role_slug => $role_data) {
-                        if ($role_slug !== 'administrator') {
-                            $available_roles[$role_slug] = translate_user_role($role_data['name']);
+                    if (isset($wp_roles->roles)) {
+                        foreach ($wp_roles->roles as $role_slug => $role_data) {
+                            if ($role_slug !== 'administrator') {
+                                $available_roles[$role_slug] = translate_user_role($role_data['name']);
+                            }
                         }
                     }
                     
@@ -1337,7 +1339,11 @@ class Property_Spotlight_Admin {
         }
         
         $json_data = isset($_POST['import_data']) ? sanitize_textarea_field(wp_unslash($_POST['import_data'])) : '';
-        
+
+        if (strlen($json_data) > 500000) {
+            wp_send_json_error(['message' => __('Import data too large (max 500 KB)', 'property-spotlight')]);
+        }
+
         if (empty($json_data)) {
             wp_send_json_error(['message' => __('No data provided', 'property-spotlight')]);
         }

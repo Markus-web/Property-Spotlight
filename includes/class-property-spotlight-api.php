@@ -368,7 +368,12 @@ class Property_Spotlight_API {
         if (!empty($dynamic_parent_pages[$lang])) {
             $page_id = (int) $dynamic_parent_pages[$lang];
             $url = get_permalink($page_id);
-            
+
+            if (false === $url) {
+                error_log('[Property Spotlight] get_permalink() returned false for page ID: ' . $page_id);
+                return '';
+            }
+
             if ($url) {
                 // Handle TranslatePress language URLs
                 if (class_exists('TRP_Translate_Press')) {

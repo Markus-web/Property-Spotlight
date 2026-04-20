@@ -258,6 +258,8 @@ add_action('property_spotlight_daily_cleanup', 'property_spotlight_daily_cleanup
 /**
  * Load plugin after all plugins are loaded
  */
+// Priority 20: load after other plugins so the Linear plugin's settings
+// are already available for the credential fallback in load_credentials().
 add_action('plugins_loaded', function() {
     // Load dependencies
     require_once PROPERTY_SPOTLIGHT_PLUGIN_PATH . '/includes/class-property-spotlight.php';

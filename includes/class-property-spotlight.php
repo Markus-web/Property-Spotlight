@@ -111,6 +111,7 @@ class Property_Spotlight {
         register_rest_route('property-spotlight/v1', '/featured', [
             'methods' => 'GET',
             'callback' => [$this, 'rest_get_featured_listings'],
+            // Public: exposes only listing IDs, no PII. Same data rendered by [property_spotlight] shortcode.
             'permission_callback' => '__return_true',
             'args' => [
                 'lang' => [
