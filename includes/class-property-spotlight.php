@@ -213,7 +213,7 @@ class Property_Spotlight {
             }
             $sanitized[] = [
                 'id'      => sanitize_text_field($item['id']),
-                'added'   => isset($item['added']) && null !== $item['added'] ? absint($item['added']) : null,
+                'added'   => isset($item['added']) && null !== $item['added'] ? absint($item['added']) : time(),
                 'expires' => isset($item['expires']) && null !== $item['expires'] ? absint($item['expires']) : null,
                 'start'   => isset($item['start']) && null !== $item['start'] ? absint($item['start']) : null,
                 'end'     => isset($item['end']) && null !== $item['end'] ? absint($item['end']) : null,
