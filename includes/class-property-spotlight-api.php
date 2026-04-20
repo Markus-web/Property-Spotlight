@@ -81,7 +81,7 @@ class Property_Spotlight_API {
      * @param string $lang Language code
      * @return array|WP_Error
      */
-    public function get_all_listings(string $lang = 'fi') {
+    public function get_all_listings(string $lang = 'fi'): array|\WP_Error {
         if (!$this->is_configured()) {
             return new \WP_Error('not_configured', __('API credentials not configured', 'property-spotlight'));
         }
@@ -175,7 +175,7 @@ class Property_Spotlight_API {
      * @param int $limit Max listings (0 = all)
      * @return array|WP_Error
      */
-    public function get_featured_listings(string $lang = 'fi', int $limit = 0) {
+    public function get_featured_listings(string $lang = 'fi', int $limit = 0): array|\WP_Error {
         $all_listings = $this->get_all_listings($lang);
         
         if (is_wp_error($all_listings)) {
@@ -193,21 +193,21 @@ class Property_Spotlight_API {
         // Get active featured items (filter by schedule and expiration)
         $active_items = $this->filter_active_listings($featured_ids, $settings);
         
+        // Build ID→listing index for O(1) lookup
+        $listings_by_id = array_column($all_listings, null, 'id');
+
         // Filter and maintain order from featured_ids
         $featured = [];
         foreach ($active_items as $item) {
-            $id = is_array($item) ? ($item['id'] ?? '') : $item;
-            
-            foreach ($all_listings as $listing) {
-                if ($listing['id'] === $id) {
-                    // Skip sold listings if auto_remove_sold is enabled
-                    if ($auto_remove_sold && $this->is_listing_sold($listing)) {
-                        continue;
-                    }
-                    $featured[] = $listing;
-                    break;
-                }
+            $id = is_array($item) ? ($item['id'] ?? '') : (string) $item;
+            if ('' === $id || !isset($listings_by_id[$id])) {
+                continue;
             }
+            $listing = $listings_by_id[$id];
+            if ($auto_remove_sold && $this->is_listing_sold($listing)) {
+                continue;
+            }
+            $featured[] = $listing;
         }
         
         if ($limit > 0) {

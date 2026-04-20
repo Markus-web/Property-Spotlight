@@ -411,12 +411,12 @@ class Property_Spotlight_Shortcode {
         }
         
         // Get current request URI
-        $current_url = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
+        $current_url = isset($_SERVER['REQUEST_URI']) ? esc_url_raw(wp_unslash($_SERVER['REQUEST_URI'])) : '';
         if (empty($current_url)) {
             return false;
         }
         
-        $current_url = trailingslashit(strtok($current_url, '?')); // Remove query string and ensure trailing slash
+        $current_url = trailingslashit(explode('?', $current_url, 2)[0]);
         
         foreach ($dynamic_parent_pages as $page_id) {
             $parent_url = get_permalink((int) $page_id);

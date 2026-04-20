@@ -268,7 +268,7 @@ class Property_Spotlight {
     /**
      * Get plugin option
      */
-    public function get_option(string $key, $default = null) {
+    public function get_option(string $key, mixed $default = null): mixed {
         return $this->options[$key] ?? $default;
     }
     
