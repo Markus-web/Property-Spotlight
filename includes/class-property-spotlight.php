@@ -139,10 +139,19 @@ class Property_Spotlight {
             'permission_callback' => fn() => current_user_can('manage_options'),
             'args' => [
                 'featured_ids' => [
-                    'type' => 'array',
+                    'type'     => 'array',
                     'required' => true,
-                    'items' => ['type' => 'string'],
-                    'sanitize_callback' => fn(array $ids): array => array_map('sanitize_text_field', $ids),
+                    'items'    => [
+                        'type'       => 'object',
+                        'properties' => [
+                            'id'      => ['type' => 'string'],
+                            'added'   => ['type' => ['integer', 'null']],
+                            'expires' => ['type' => ['integer', 'null']],
+                            'start'   => ['type' => ['integer', 'null']],
+                            'end'     => ['type' => ['integer', 'null']],
+                        ],
+                        'required' => ['id'],
+                    ],
                 ],
             ],
         ]);
@@ -192,21 +201,31 @@ class Property_Spotlight {
      */
     public function rest_save_settings(\WP_REST_Request $request): \WP_REST_Response {
         $featured_ids = $request->get_param('featured_ids');
-        
+
         if (!is_array($featured_ids)) {
             return new \WP_REST_Response(['error' => 'Invalid featured_ids'], 400);
         }
-        
-        // Sanitize IDs
-        $featured_ids = array_map('sanitize_text_field', $featured_ids);
-        
-        $this->options['featured_ids'] = $featured_ids;
+
+        $sanitized = [];
+        foreach ($featured_ids as $item) {
+            if (!is_array($item) || empty($item['id'])) {
+                continue;
+            }
+            $sanitized[] = [
+                'id'      => sanitize_text_field($item['id']),
+                'added'   => isset($item['added']) && null !== $item['added'] ? absint($item['added']) : null,
+                'expires' => isset($item['expires']) && null !== $item['expires'] ? absint($item['expires']) : null,
+                'start'   => isset($item['start']) && null !== $item['start'] ? absint($item['start']) : null,
+                'end'     => isset($item['end']) && null !== $item['end'] ? absint($item['end']) : null,
+            ];
+        }
+
+        $this->options['featured_ids'] = $sanitized;
         update_option('property_spotlight_settings', $this->options);
-        
-        // Clear cache
+
         delete_transient('property_spotlight_featured_cache');
-        
-        return new \WP_REST_Response(['success' => true, 'featured_ids' => $featured_ids], 200);
+
+        return new \WP_REST_Response(['success' => true, 'featured_ids' => $sanitized], 200);
     }
     
     /**
