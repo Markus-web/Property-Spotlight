@@ -38,35 +38,36 @@ class Property_Spotlight_Admin {
      * 
      * Admins always have access. Other users need to be in allowed roles or allowed users list.
      */
-    public function current_user_can_manage_listings(): bool {
-        // Admins always have full access
+    public static function user_can_manage_listings(): bool {
         if (current_user_can('manage_options')) {
             return true;
         }
-        
+
         $settings = get_option('property_spotlight_settings', []);
         $access = $settings['access'] ?? [];
         $allowed_roles = $access['allowed_roles'] ?? [];
         $allowed_users = $access['allowed_users'] ?? [];
-        
+
         $user = wp_get_current_user();
         if (!$user->exists()) {
             return false;
         }
-        
-        // Check if user ID is in allowed users list
+
         if (in_array($user->ID, array_map('intval', $allowed_users), true)) {
             return true;
         }
-        
-        // Check if user has any of the allowed roles
+
         foreach ($user->roles as $role) {
             if (in_array($role, $allowed_roles, true)) {
                 return true;
             }
         }
-        
+
         return false;
+    }
+
+    public function current_user_can_manage_listings(): bool {
+        return self::user_can_manage_listings();
     }
     
     /**

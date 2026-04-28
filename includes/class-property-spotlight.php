@@ -97,7 +97,7 @@ class Property_Spotlight {
         register_rest_route('property-spotlight/v1', '/listings', [
             'methods' => 'GET',
             'callback' => [$this, 'rest_get_all_listings'],
-            'permission_callback' => fn() => current_user_can('edit_posts'),
+            'permission_callback' => fn() => Property_Spotlight_Admin::user_can_manage_listings(),
             'args' => [
                 'lang' => [
                     'type' => 'string',
@@ -137,7 +137,7 @@ class Property_Spotlight {
         register_rest_route('property-spotlight/v1', '/settings', [
             'methods' => 'POST',
             'callback' => [$this, 'rest_save_settings'],
-            'permission_callback' => fn() => current_user_can('manage_options'),
+            'permission_callback' => fn() => Property_Spotlight_Admin::user_can_manage_listings(),
             'args' => [
                 'featured_ids' => [
                     'type'     => 'array',
@@ -239,6 +239,13 @@ class Property_Spotlight {
             [],
             PROPERTY_SPOTLIGHT_VERSION
         );
+        wp_register_script(
+            'property-spotlight-carousel',
+            PROPERTY_SPOTLIGHT_PLUGIN_URL . 'assets/js/carousel.js',
+            [],
+            PROPERTY_SPOTLIGHT_VERSION,
+            true
+        );
     }
     
     /**
@@ -258,6 +265,7 @@ class Property_Spotlight {
         }
         
         // TranslatePress
+        // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- Third-party TranslatePress global
         global $TRP_LANGUAGE;
         if (!empty($TRP_LANGUAGE) && is_string($TRP_LANGUAGE)) {
             return substr($TRP_LANGUAGE, 0, 2);

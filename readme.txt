@@ -1,5 +1,5 @@
 === Property Spotlight ===
-Contributors: markusmedia
+Contributors: markusmedia, markus7w
 Tags: real estate, property, listings, linear, spotlight
 Requires at least: 6.4
 Tested up to: 7.0

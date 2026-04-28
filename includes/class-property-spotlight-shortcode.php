@@ -228,7 +228,7 @@ class Property_Spotlight_Shortcode {
         $output .= '</div>';
         
         if ($layout === 'carousel') {
-            $output .= $this->get_carousel_script();
+            wp_enqueue_script('property-spotlight-carousel');
         }
         
         return $output;
@@ -336,74 +336,6 @@ class Property_Spotlight_Shortcode {
             <button type="button" class="property-spotlight__nav property-spotlight__nav--next" aria-label="' . esc_attr__('Next', 'property-spotlight') . '">
                 <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
             </button>
-        ';
-    }
-    
-    /**
-     * Get carousel JavaScript
-     *
-     * @return string
-     */
-    private function get_carousel_script(): string {
-        static $printed = false;
-        if ($printed) {
-            return '';
-        }
-        $printed = true;
-
-        return '
-        <script>
-        (function() {
-            document.querySelectorAll(".property-spotlight--carousel").forEach(function(carousel) {
-                var track = carousel.querySelector(".property-spotlight__track");
-                var prevBtn = carousel.querySelector(".property-spotlight__nav--prev");
-                var nextBtn = carousel.querySelector(".property-spotlight__nav--next");
-                var items = carousel.querySelectorAll(".property-spotlight__item");
-                
-                if (!track || !items.length) return;
-                
-                var currentIndex = 0;
-                var itemWidth = items[0].offsetWidth;
-                var gap = 16;
-                var visibleItems = Math.floor(carousel.offsetWidth / (itemWidth + gap)) || 1;
-                var maxIndex = Math.max(0, items.length - visibleItems);
-                
-                function updatePosition() {
-                    track.style.transform = "translateX(-" + (currentIndex * (itemWidth + gap)) + "px)";
-                    if (prevBtn) prevBtn.disabled = currentIndex <= 0;
-                    if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
-                }
-                
-                if (prevBtn) {
-                    prevBtn.addEventListener("click", function() {
-                        if (currentIndex > 0) {
-                            currentIndex--;
-                            updatePosition();
-                        }
-                    });
-                }
-                
-                if (nextBtn) {
-                    nextBtn.addEventListener("click", function() {
-                        if (currentIndex < maxIndex) {
-                            currentIndex++;
-                            updatePosition();
-                        }
-                    });
-                }
-                
-                window.addEventListener("resize", function() {
-                    itemWidth = items[0].offsetWidth;
-                    visibleItems = Math.floor(carousel.offsetWidth / (itemWidth + gap)) || 1;
-                    maxIndex = Math.max(0, items.length - visibleItems);
-                    if (currentIndex > maxIndex) currentIndex = maxIndex;
-                    updatePosition();
-                });
-                
-                updatePosition();
-            });
-        })();
-        </script>
         ';
     }
     
